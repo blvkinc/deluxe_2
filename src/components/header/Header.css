@@ -1,0 +1,232 @@
+/* Header container */
+.header {
+  background: transparent;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  overflow: visible; /* Show overflow content */
+  height: auto; /* Auto height for the header */
+  scroll-snap-align: start;
+}
+
+.header:hover {
+  background-color: #ffffff;
+  color: #000000;
+  height: auto; /* Auto height on hover */
+}
+
+.header.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease, visibility 0.3s ease;
+}
+
+.header img {
+  align-items: center;
+  max-width: 17vw;
+  margin-right: 4vw;
+}
+
+.header h3,
+h5 {
+  text-align: left;
+}
+
+/* Logo */
+.header-logo img {
+  position: fixed;
+  top: 1.6rem;
+  left: auto;
+}
+
+/* Navigation menu */
+.header-nav .menu {
+  list-style-type: none;
+  display: flex;
+}
+
+.header-nav .menu-item button {
+  margin-right: 20px;
+  position: relative;
+  color: #ffffff;
+  justify-content: space-evenly;
+  cursor: pointer;
+  transition: opacity 0.3s; /* Added opacity transition */
+  margin-right: 3rem;
+}
+
+.header:hover .header-nav .menu-item button {
+  color: #000000; /* Change color when menu is hovered */
+}
+.header-nav .menu-item button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+  position: relative; /* Add relative position */
+}
+
+.menu-item.active button {
+  color: #1b1b1b; /* Change the color for active menu buttons as needed */
+}
+.header-nav .menu-item button:hover {
+  color: #000000;
+}
+
+/* Font size and color for submenu items */
+.sub-menu-item {
+}
+
+/* Font size and color for active submenu items */
+.menu-item.active .sub-menu-item {
+  color: #000000;
+
+  /* Change the color for active submenu items as needed */
+}
+
+/* Submenu container */
+.sub-menu {
+  background-color: #ffffff;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: opacity 0.2s, visibility 0.2s, transform 0.3s ease;
+  width: 100%; /* Set width to 100% to fill the viewport */
+  position: fixed;
+  top: 75px; /* Position submenu below the menu item */
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow submenu items to wrap if necessary */
+  justify-content: center;
+  align-items: center; /* Adjust this as needed for spacing */
+  padding: 30px;
+  text-decoration: none;
+  color: #000000 !important;
+  pointer-events: auto;
+}
+
+/* Submenu items */
+.sub-menu-item {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s, transform 0.3s ease;
+  margin-right: 30px;
+}
+
+/* Active state for submenu */
+.menu-item:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+  transition: opacity 0.5s, visibility 0.3s, transform 0.3s ease;
+}
+
+/* Active state for submenu items */
+.menu-item.active .sub-menu-item {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s ease;
+}
+
+.nested-submenu {
+  background-color: #ffffff;
+  z-index: 999;
+  opacity: 0; /* Set initial opacity to 0 */
+  visibility: hidden; /* Set initial visibility to hidden */
+  transform: scaleY(0); /* Set initial scale to 0 */
+  transform-origin: top;
+  width: 100%;
+  top: 122px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  text-decoration: none;
+  color: #000000 !important;
+}
+
+/* Nested Submenu items */
+.nested-submenu-item {
+  opacity: 0;
+  margin-right: 30px;
+  flex: 0 0 auto; /* Ensure items don't grow or shrink */
+}
+
+/* Active state for nested submenu */
+.menu-item:hover .nested-submenu {
+  opacity: 1; /* Change opacity to 1 when hovered */
+  visibility: visible; /* Change visibility to visible when hovered */
+  transform: scaleY(1); /* Scale up when hovered */
+  transition: opacity 0.5s, visibility 0.3s, transform 0.3s ease;
+  transition-delay: 0.2s; /* Add a delay before transitioning out */
+}
+
+/* Active state for nested submenu items */
+.menu-item.active .nested-submenu-item {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s ease;
+}
+
+.sub-menu-item .submenu-label.stormbreaker {
+  font-weight: 700;
+  margin-right: 50px;
+}
+
+.sub-menu-item .submenu-label.riptide {
+  font-weight: 700;
+  margin-left: 50px;
+}
+
+.iconh {
+  height: 27px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
+    scroll-snap-align: none !important;
+  }
+
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #ffffff;
+    padding: 20px;
+    flex-direction: column;
+    border-radius: 5px;
+  }
+
+  .header-nav.active {
+    display: flex;
+  }
+
+  .header-nav .menu-item {
+    margin: 10px 0;
+  }
+
+  .header-logo img {
+    position: fixed;
+    top: 1rem;
+    left: 5rem;
+  }
+}
