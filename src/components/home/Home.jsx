@@ -41,7 +41,7 @@ function Home() {
       <div className="videocomponent">
         <Video />
       </div>
-      <div className="component">
+      <div className="videocomponent">
         <Promovid />
       </div>
       <div className="component">

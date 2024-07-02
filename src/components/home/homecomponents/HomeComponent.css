@@ -595,6 +595,11 @@
       margin-right: 5vw;
       width: 200vw;
     }
+
+    .carousel-button {
+
+      font-size: 24px; /* Increased font size */
+    }
   }
 
   /* Media query for screens with a width between 768px and 1200px */
@@ -602,11 +607,21 @@
     .slide {
       margin-right: 15vw;
     }
+
+    .carousel-button {
+
+      font-size: 24px; /* Increased font size */
+    }
   }
 }
 @media screen and (max-width: 480px) {
   .link-overlay {
     margin-top: 55%;
+  }
+
+  .carousel-button {
+
+    font-size: 24px; /* Increased font size */
   }
 }
 
@@ -647,11 +662,83 @@
    overflow: visible;
   }
 
+  .carousel-button {
+
+    font-size: 24px; /* Increased font size */
+  }
 }
 
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .component2{
     scroll-snap-align: none !important; 
+  }
+
+  .carousel-button {
+
+    font-size: 24px; /* Increased font size */
+  }
+}
+
+
+.swiper-slide {
+  transition: transform 0.3s;
+  transform-origin: center center;
+  opacity: 1;
+  position: relative;
+}
+
+.vContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-slide iframe {
+  height: 100%;
+  width: 100%; /* Change this from 150% to 100% to fit the container */
+  z-index: 0;
+}
+
+.swiper-slide-prev {
+  transform: translateX(-50%) scale(0.8) translateX(-50px);
+  opacity: 0.7;
+}
+
+.swiper-slide-next {
+  transform: translateX(50%) scale(0.8) translateX(50px);
+  opacity: 0.7;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important; 
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 990px) {
+  .swiper-slide {
+    transform: none !important;
+  }
+
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    transform: none;
+    opacity: 1;
+  }
+
+  .swiper-container {
+    height: auto;
   }
 }

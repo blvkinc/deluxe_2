@@ -18,6 +18,10 @@ const Tour = React.memo(() => {
       url: "https://sh.smartviewmedia.com.au/m/kyd7182/?v=kyd7182",
     },
     {
+      name: "Storm Breaker 23'11 FT",
+      url: "https://sh.smartviewmedia.com.au/m/xmc7473/?v=xmc7473",
+    },
+    {
       name: "Storm Breaker 21’6 FT",
       url: "https://sh.smartviewmedia.com.au/m/ghk6493/?v=ghk6493",
     },
