@@ -65,10 +65,10 @@ const Model = ({ isOpen, onClose }) => {
               <p className="model-disc3">
                 <b>DOMETIC FRESHJET AIRCON</b>
               </p> */}
-              <h2>"Riptide 22FT Specifications and Floor plan Updated"</h2>
+              <h2>"It has been an incredible 2024 for Deluxe Caravans x Infinite RV. We are accepting orders for 2025 now"</h2>
             </div>
             <button className="model-button model-inqurie">
-              <a href="/riptide22">&#128073; View details</a>
+              <a href="/contact">&#128073;Contact us</a>
             </button>
           </motion.div>
         </div>

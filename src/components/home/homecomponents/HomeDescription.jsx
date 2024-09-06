@@ -21,6 +21,9 @@ const HomeDescription = () => {
       ref={ref}
     >
       <div className="desccomponent">
+      <h1 style={{ opacity: 1, transform: "translateY(0)" }}>
+        CROSS COUNTRY? WE HEAR YOU!
+      </h1>
         <p
           style={{
             opacity: 1,

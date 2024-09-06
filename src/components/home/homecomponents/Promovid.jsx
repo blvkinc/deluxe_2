@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,10 +13,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Promovid() {
   const [isTabScreen, setIsTabScreen] = useState(false);
+  const [isMobileScreen, setIsMobileScreen] = useState(false);
+  const swiperRef = useRef(null);
 
   const updateSwiperConfig = () => {
     const screenWidth = window.innerWidth;
     setIsTabScreen(screenWidth <= 990);
+    setIsMobileScreen(screenWidth <= 600);
   };
 
   useEffect(() => {
@@ -28,23 +31,24 @@ function Promovid() {
   }, []);
 
   useEffect(() => {
-    const swiperInstance = document.querySelector(".swiper-container").swiper;
-    swiperInstance.on('slideChange', () => {
-      const iframes = document.querySelectorAll('iframe');
-      iframes.forEach((iframe) => {
-        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    if (swiperRef.current) {
+      swiperRef.current.swiper.on("slideChange", () => {
+        const iframes = document.querySelectorAll("iframe");
+        iframes.forEach((iframe) => {
+          iframe.contentWindow.postMessage(
+            '{"event":"command","func":"pauseVideo","args":""}',
+            "*"
+          );
+        });
       });
-    });
-    swiperInstance.update();
+    }
   }, [isTabScreen]);
 
   return (
     <div className="container">
-      <h1 style={{ opacity: 1, transform: "translateY(0)" }}>
-        CROSS COUNTRY? WE HEAR YOU!
-      </h1>
       <div className="vContainer">
         <Swiper
+          ref={swiperRef}
           navigation
           pagination={{ clickable: true }}
           effect={isTabScreen ? "slide" : "coverflow"}
@@ -57,8 +61,10 @@ function Promovid() {
           }}
           slidesPerView={isTabScreen ? 1.5 : 2}
           centeredSlides
-          initialSlide={1}
-          style={{ height: isTabScreen ? "300px" : "500px" }}
+          initialSlide={1}  // Set the second video to be selected by default
+          style={{
+            height: isMobileScreen ? "auto" : isTabScreen ? "300px" : "500px",
+          }}
           modules={[Navigation, Pagination, EffectCoverflow]}
           className="swiper-container"
         >
@@ -73,6 +79,13 @@ function Promovid() {
             <iframe
               title="Video 2"
               src="https://player.vimeo.com/video/967528896?h=e20f28a04e&badge=0&autopause=0&player_id=0&app_id=58479"
+              allowFullScreen
+            ></iframe>
+          </SwiperSlide>
+          <SwiperSlide className="swiper-slide">
+            <iframe
+              title="Video 3"
+              src="https://player.vimeo.com/video/976350631?h=699f53a950"
               allowFullScreen
             ></iframe>
           </SwiperSlide>
