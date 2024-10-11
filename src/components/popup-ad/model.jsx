@@ -65,7 +65,7 @@ const Model = ({ isOpen, onClose }) => {
               <p className="model-disc3">
                 <b>DOMETIC FRESHJET AIRCON</b>
               </p> */}
-              <h2>"It has been an incredible 2024 for Deluxe Caravans x Infinite RV. We are accepting orders for 2025 now"</h2>
+              <h2>" Stock Available for December pickup, Inquire Now for more details "</h2>
             </div>
             <button className="model-button model-inqurie">
               <a href="/contact">&#128073;Contact us</a>

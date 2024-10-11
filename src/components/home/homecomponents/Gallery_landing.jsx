@@ -68,7 +68,7 @@ const Gallery_landing = () => {
               height="100px"
               width="100px"
             />
-            <p>Top Notch Support</p>
+            <p>Nation Wide Warranty</p>
           </div>
           </div>
     </div>
