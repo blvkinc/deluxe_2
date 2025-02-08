@@ -68,23 +68,31 @@ function Promovid() {
           modules={[Navigation, Pagination, EffectCoverflow]}
           className="swiper-container"
         >
-          <SwiperSlide className="swiper-slide">
+            <SwiperSlide className="swiper-slide">
             <iframe
               title="Video 1"
               src="https://player.vimeo.com/video/945631996?h=7774de72a1&badge=0&autopause=0&player_id=0&app_id=58479"
               allowFullScreen
             ></iframe>
           </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
+        <SwiperSlide className="swiper-slide">
             <iframe
               title="Video 2"
+              src="https://player.vimeo.com/video/1053997518"
+              allowFullScreen
+            ></iframe>
+          </SwiperSlide>
+        
+          <SwiperSlide className="swiper-slide">
+            <iframe
+              title="Video 3"
               src="https://player.vimeo.com/video/967528896?h=e20f28a04e&badge=0&autopause=0&player_id=0&app_id=58479"
               allowFullScreen
             ></iframe>
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
             <iframe
-              title="Video 3"
+              title="Video 4"
               src="https://player.vimeo.com/video/976350631?h=699f53a950"
               allowFullScreen
             ></iframe>

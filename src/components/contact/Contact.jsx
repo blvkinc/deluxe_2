@@ -81,10 +81,10 @@ const Contact = () => {
         mobile: mobile,
         message: message,
       })
-      .then((response) => {
+      .then(() => {
         setEmailStatus("success");
       })
-      .catch((error) => {
+      .catch(() => {
         setEmailStatus("error");
       });
   }, [formData]);
@@ -92,11 +92,24 @@ const Contact = () => {
   const resetEmailStatus = useCallback(() => {
     setEmailStatus(null);
   }, []);
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    const { name, email, mobile, message } = formData;
+    if (!name || !email || !mobile || !message) {
+      console.log("All fields are required.");
+      return;
+    }
+
+    handleSendEmail();
+  };
+
   return (
     <div className="contact__container revealUp">
       <h1 className={animate ? "lineUp" : ""}>Contact us</h1>
       <div className="contact-container">
-        <form className="contact__form">
+        <form className="contact__form" onSubmit={handleFormSubmit}>
           <div className="input__group">
             <input
               type="text"
@@ -105,6 +118,7 @@ const Contact = () => {
               placeholder="Name"
               value={formData.name}
               onChange={handleChange}
+              required
             />
           </div>
           <div className="input__group">
@@ -115,6 +129,7 @@ const Contact = () => {
               placeholder="Email"
               value={formData.email}
               onChange={handleChange}
+              required
             />
           </div>
           <div className="input__group">
@@ -125,6 +140,7 @@ const Contact = () => {
               placeholder="Mobile"
               value={formData.mobile}
               onChange={handleChange}
+              required
             />
           </div>
           <div className="input__group input__group--message">
@@ -135,9 +151,10 @@ const Contact = () => {
               placeholder="Message"
               value={formData.message}
               onChange={handleChange}
+              required
             />
           </div>
-          <button type="button" className="send" onClick={handleSendEmail}>
+          <button type="submit" className="send">
             Send
           </button>
           <Link to="/appointment" className="book">
@@ -160,6 +177,6 @@ const Contact = () => {
       )}
     </div>
   );
-}
+};
 
 export default React.memo(Contact);

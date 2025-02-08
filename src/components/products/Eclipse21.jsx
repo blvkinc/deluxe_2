@@ -118,7 +118,7 @@ to an exceptionally roomy layout, complete with all the amenities you&#39;d expe
           </div>
           <div className="package-details">
             <p>
-              <h2>NOW WITH ALL 2024 ORDERS, OFF-GRID PACKAGE INCLUSIONS: </h2>
+              <h2>NOW WITH ALL 2025 ORDERS, OFF-GRID PACKAGE INCLUSIONS: </h2>
             </p>
             <p>
               <h3>WORTH $5000 !</h3>

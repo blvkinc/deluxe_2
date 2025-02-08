@@ -98,6 +98,14 @@ input {
   display: none;
 }
 
+.error-message {
+  color: red;
+  font-size: 10px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  display: block;
+}
+
 .alert.show {
   display: block;
 }

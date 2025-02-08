@@ -65,7 +65,7 @@ const Model = ({ isOpen, onClose }) => {
               <p className="model-disc3">
                 <b>DOMETIC FRESHJET AIRCON</b>
               </p> */}
-              <h2>" Stock Available for December pickup, Inquire Now for more details "</h2>
+              <h2>"Stock Demo OFF-GRID 19'6 Stormbreaker - 2 Bunks Available Now. Save 14K!"</h2>
             </div>
             <button className="model-button model-inqurie">
               <a href="/contact">&#128073;Contact us</a>

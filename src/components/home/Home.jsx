@@ -33,11 +33,11 @@ function Home() {
 
   return (
     <div className="container">
-      {isOpen && (
-        <div className="ad-model">
-          <Model isOpen={isOpen} onClose={handleCloseModal} />
-        </div>
-      )}
+      {/* {isOpen && (
+        // <div className="ad-model">
+        //   <Model isOpen={isOpen} onClose={handleCloseModal} />
+        // </div>
+      )} */}
       <div className="videocomponent">
         <Video />
       </div>

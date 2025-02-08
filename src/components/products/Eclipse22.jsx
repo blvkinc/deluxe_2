@@ -116,7 +116,7 @@ Built with premium interior, exterior, and mechanical features when you embark o
           </div>
           <div className="package-details">
             <p>
-              <h2>NOW WITH ALL 2024 ORDERS, OFF-GRID PACKAGE INCLUSIONS: </h2>
+              <h2>NOW WITH ALL 2025 ORDERS, OFF-GRID PACKAGE INCLUSIONS: </h2>
             </p>
             <p>
               <h3>WORTH $5000 !</h3>
