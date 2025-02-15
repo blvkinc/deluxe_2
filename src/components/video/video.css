@@ -2,7 +2,7 @@
 .vidcontainer {
   display: flex;
   flex-direction: column;
- margin-top: 10vh;
+  margin-top: 10vh;
 }
 
 .vidcomponent {
@@ -12,8 +12,9 @@
   padding: 20px; /* Optional: Add padding to the components */
   min-height: 50px; /* Increase the minimum height to create more spacing */
   height: auto;
-  scroll-snap-align: start;
+  scroll-snap-align: none;
 }
+
 .video-gallery {
   display: flex;
   justify-content: center;
@@ -30,14 +31,20 @@
 /* Media query for medium-sized screens (adjust as needed) */
 @media (max-width: 768px) {
   .video-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for screens up to 768px wide */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columns for screens up to 768px wide */
   }
 }
 
 /* Media query for small-sized screens (adjust as needed) */
 @media (max-width: 480px) {
   .video-grid {
-    grid-template-columns: repeat(1, 1fr); /* 1 column for screens up to 480px wide */
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* 1 column for screens up to 480px wide */
   }
 }
 
@@ -63,17 +70,9 @@
   margin: 0;
 }
 
-
-@media (max-width: 768px) {
-  .vidcomponent  {
-    scroll-snap-align: none !important; 
-
-  }
-}
-
-
-@media (min-width: 769px) and (max-width: 1200px) {
-  .vidcomponent{
-    scroll-snap-align: none !important; 
+/* Desktop and larger screens only */
+@media (min-width: 1024px) {
+  .vidcomponent {
+    scroll-snap-align: start !important;
   }
 }
