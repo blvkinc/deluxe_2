@@ -13,15 +13,15 @@
   padding: 20px; /* Optional: Add padding to the components */
   min-height: 50px; /* Increase the minimum height to create more spacing */
   height: auto; /* Remove fixed height to allow components to expand as needed */
-  scroll-snap-align: start;
   text-align: left;
   padding-left: 10vw;
   padding-right: 10vw;
+  scroll-snap-align: none;
 }
 
 /* Style heading and paragraph elements within the components */
 .warrantycomponent h2 {
-  margin-top:10vh;
+  margin-top: 10vh;
   font-size: 1.5rem; /* Increase the font size for headings */
   margin-bottom: 10px; /* Add space below headings */
 }
@@ -43,17 +43,9 @@
   margin-bottom: 5px; /* Add space between list items */
 }
 
-
-@media (max-width: 768px) {
-  .warrantycomponent  {
-    scroll-snap-align: none !important; 
-
-  }
-}
-
-
-@media (min-width: 769px) and (max-width: 1200px) {
+/* Desktop and larger screens only */
+@media (min-width: 1024px) {
   .warrantycomponent {
-    scroll-snap-align: none !important; 
+    scroll-snap-align: start !important;
   }
 }

@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: start;
+  scroll-snap-align: none;
 }
 
 .desccomponent {
@@ -160,6 +160,13 @@
 
 .image-item.current {
   border: 2px solid rgb(255, 255, 255); /* Highlight the current image */
+}
+
+/* Desktop and larger screens only */
+@media (min-width: 1024px) {
+  .component2 {
+    scroll-snap-align: start !important;
+  }
 }
 
 /* Media query for mobile screens */
@@ -616,10 +623,6 @@
 }
 
 @media (max-width: 768px) {
-  .component2 {
-    scroll-snap-align: none !important;
-  }
-
   .slide__quote a {
     font-size: 14px;
   }
@@ -655,10 +658,6 @@
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
-  .component2 {
-    scroll-snap-align: none !important;
-  }
-
   .carousel-button {
     font-size: 24px; /* Increased font size */
   }
