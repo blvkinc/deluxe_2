@@ -122,7 +122,7 @@ const Stormbreaker19 = () => {
                 <a href="/tour">Have a look at STORMBREAKER 19`6</a>
               </button>
             </p>
-            <button
+            {/* <button
               className="btn hover-border-1 revealUp"
               onClick={openWarrantyPopupWarrantyPolicy}
             >
@@ -130,7 +130,7 @@ const Stormbreaker19 = () => {
             </button>
             {isWarrantyPopupOpen && (
               <WarrantyPolicyPopup onClose={closeWarrantyPopupWarrantyPolicy} />
-            )}
+            )} */}
 
             
           </div>

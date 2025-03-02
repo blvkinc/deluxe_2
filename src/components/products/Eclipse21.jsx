@@ -106,7 +106,7 @@ again this an ideal setup for anyone who likes life on the road.Built with premi
 and mechanical features when you embark on the open road with your loved ones, you&#39;ll be treated
 to an exceptionally roomy layout, complete with all the amenities you&#39;d expect from a luxury RV.
             </p>
-            <button
+            {/* <button
               className="btn hover-border-1 revealUp"
               onClick={openWarrantyPopupWarrantyPolicy}
             >
@@ -114,7 +114,7 @@ to an exceptionally roomy layout, complete with all the amenities you&#39;d expe
             </button>
             {isWarrantyPopupOpen && (
               <WarrantyPolicyPopup onClose={closeWarrantyPopupWarrantyPolicy} />
-            )}
+            )} */}
           </div>
           <div className="package-details">
             <p>

@@ -233,6 +233,6 @@ h5 {
 /* Desktop and larger screens only */
 @media (min-width: 1024px) {
   .header {
-    scroll-snap-align: start !important;
+    /* scroll-snap-align: start !important; */
   }
 }

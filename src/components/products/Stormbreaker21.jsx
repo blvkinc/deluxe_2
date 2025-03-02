@@ -124,7 +124,7 @@ const Stormbreaker21 = () => {
                 <a href="/tour">Have a look at STORMBREAKER 21`6</a>
               </button>
             </p>
-            <button
+            {/* <button
               className="btn hover-border-1 revealUp"
               onClick={openWarrantyPopupWarrantyPolicy}
             >
@@ -132,7 +132,7 @@ const Stormbreaker21 = () => {
             </button>
             {isWarrantyPopupOpen && (
               <WarrantyPolicyPopup onClose={closeWarrantyPopupWarrantyPolicy} />
-            )}
+            )} */}
           </div>
           <div className="image">
             <iframe

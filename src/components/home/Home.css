@@ -33,6 +33,6 @@
   .gallerycomponent,
   .videocomponent,
   .partnercomponent {
-    scroll-snap-align: start !important;
+    /* scroll-snap-align: start !important; */
   }
 }
