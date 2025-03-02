@@ -47,6 +47,7 @@
   padding-left: 20px;
   list-style: none;
 }
+
 .dropdown-menu .navbar-nav .nav-item {
   margin-bottom: 10px;
 }
@@ -138,7 +139,6 @@
 
 .submenu {
   position: absolute;
-
   left: 0;
   background-color: white;
   z-index: 1000;
@@ -151,4 +151,32 @@
 ul.submenu-list {
   width: 100%;
   padding: 0;
+}
+
+.submenu-list li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.submenu-list li img {
+  width: 100px;
+  height: auto;
+}
+
+.submenu-list li div {
+  flex: 1;
+}
+
+.submenu-list li p {
+  margin: 10px 0 5px;
+  font-size: 12px;
+  width: 150px;
+}
+
+.submenu-list li p:last-child {
+  margin: 0;
+  font-size: 12px;
+  color: black;
 }
