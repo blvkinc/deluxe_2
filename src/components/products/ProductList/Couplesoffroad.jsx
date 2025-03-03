@@ -4,7 +4,7 @@ import "./Productlist.css";
 const Couplesoffroad = React.memo(() => {
   return (
     <div className="productlist">
-      <h1>Couples Offroad</h1>
+      <h1>Couples XP Tech</h1>
     </div>
   );
 });

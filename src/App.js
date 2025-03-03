@@ -8,17 +8,17 @@ import Footer from "./components/footer/Footer";
 const About = lazy(() => import("./components/about/About"));
 const Blog = lazy(() => import("./components/blog/Blog"));
 const Video = lazy(() => import("./components/video/Video"));
-const Stormbreaker19 = lazy(
-  () => import("./components/products/Stormbreaker19"),
+const Stormbreaker19 = lazy(() =>
+  import("./components/products/Stormbreaker19")
 );
-const Stormbreaker21 = lazy(
-  () => import("./components/products/Stormbreaker21"),
+const Stormbreaker21 = lazy(() =>
+  import("./components/products/Stormbreaker21")
 );
-const Stormbreaker18 = lazy(
-  () => import("./components/products/Stormbreaker18"),
+const Stormbreaker18 = lazy(() =>
+  import("./components/products/Stormbreaker18")
 );
-const Stormbreaker23 = lazy(
-  () => import("./components/products/Stormbreaker23"),
+const Stormbreaker23 = lazy(() =>
+  import("./components/products/Stormbreaker23")
 );
 const Eclipse21 = lazy(() => import("./components/products/Eclipse21"));
 const Eclipse22 = lazy(() => import("./components/products/Eclipse22"));
@@ -26,20 +26,20 @@ const Riptide22 = lazy(() => import("./components/products/Riptide22"));
 const Contact = lazy(() => import("./components/contact/Contact"));
 const Appointment = lazy(() => import("./components/bookus/Appointment"));
 const Tour = lazy(() => import("./components/tour/Tour"));
-const Warranty = lazy(
-  () => import("./components/warrantypolicy/WarrantyPolicy"),
+const Warranty = lazy(() =>
+  import("./components/warrantypolicy/WarrantyPolicy")
 );
-const Familyoffroad = lazy(
-  () => import("./components/products/ProductList/Familyoffroad"),
+const Familyoffroad = lazy(() =>
+  import("./components/products/ProductList/Familyoffroad")
 );
-const Familyxptech = lazy(
-  () => import("./components/products/ProductList/Familyxptech"),
+const Familyxptech = lazy(() =>
+  import("./components/products/ProductList/Familyxptech")
 );
-const Couplesxptech = lazy(
-  () => import("./components/products/ProductList/Couplesxptech"),
+const Couplesxptech = lazy(() =>
+  import("./components/products/ProductList/Couplesxptech")
 );
-const Couplesoffroad = lazy(
-  () => import("./components/products/ProductList/Couplesoffroad"),
+const Couplesoffroad = lazy(() =>
+  import("./components/products/ProductList/Couplesoffroad")
 );
 
 const MemoizedHeader = React.memo(Header);
