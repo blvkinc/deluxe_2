@@ -8,7 +8,7 @@ import Navbar from "./mobileNavbar/Navbar";
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [isMobile, setIsMobile] = useState(
-    useMemo(() => window.innerWidth <= 768, [])
+    useMemo(() => window.innerWidth <= 768, []),
   );
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
@@ -22,7 +22,7 @@ const Header = () => {
       setWindowWidth(newWidth);
       setIsMobile(newWidth <= 768);
     }, 200),
-    []
+    [],
   );
 
   useEffect(() => {
@@ -71,7 +71,7 @@ const Header = () => {
       setVisible(
         (prevScrollPos > currentScrollPos &&
           prevScrollPos - currentScrollPos > 70) ||
-          currentScrollPos < 10
+          currentScrollPos < 10,
       );
       setPrevScrollPos(currentScrollPos);
     }, 200);
@@ -312,6 +312,7 @@ const Header = () => {
           { label: "UPDATES", link: "/blog" },
           { label: "VIDEOS", link: "/video" },
           { label: "WARRANTY POLICY", link: "/warranty" },
+          { label: "VIRTUAL TOURS", link: "/tour" },
         ],
       },
       {
@@ -400,7 +401,7 @@ const Header = () => {
         ],
       },
     ],
-    []
+    [],
   );
 
   return (
@@ -479,7 +480,7 @@ const Header = () => {
                               >
                                 <span
                                   className={`submenu-label ${String(
-                                    subitem.label
+                                    subitem.label,
                                   ).toLowerCase()}`}
                                 >
                                   {subitem.label}
@@ -503,7 +504,7 @@ const Header = () => {
                                             key={nestedIndex}
                                             onMouseEnter={() =>
                                               handleNestedSubMenuHover(
-                                                nestedSubitem.label
+                                                nestedSubitem.label,
                                               )
                                             }
                                             onMouseLeave={() =>
@@ -556,7 +557,7 @@ const Header = () => {
                                                       {nestedSubitem.submenu.map(
                                                         (
                                                           deepNestedSubitem,
-                                                          deepIndex
+                                                          deepIndex,
                                                         ) => (
                                                           <Link
                                                             key={deepIndex}
@@ -605,14 +606,14 @@ const Header = () => {
                                                               )}
                                                             </motion.div>
                                                           </Link>
-                                                        )
+                                                        ),
                                                       )}
                                                     </motion.div>
                                                   )}
                                               </motion.div>
                                             </Link>
                                           </div>
-                                        )
+                                        ),
                                       )}
                                     </motion.div>
                                   )}
@@ -627,7 +628,7 @@ const Header = () => {
               ))}
               <li className="menu-item">
                 <Link to="/tour">
-                  <button>VIRTUAL TOURS</button>
+                  <button>XP-TECH</button>
                 </Link>
               </li>
               <li className="menu-item">

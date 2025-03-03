@@ -12,19 +12,6 @@ const Navbar = () => {
   const [ourCouplesVisible, setOurCouplesVisible] = useState(false);
   const [resourcesVisible, setResourcesVisible] = useState(false);
 
-  // Submenu visibility states - Family category
-  const [familyOffRoadVisible, setFamilyOffRoadVisible] = useState(false);
-  const [familyXpTechVisible, setFamilyXpTechVisible] = useState(false);
-
-  // Submenu visibility states - Couples category
-  const [couplesOffRoadVisible, setCouplesOffRoadVisible] = useState(false);
-  const [couplesXpTechVisible, setCouplesXpTechVisible] = useState(false);
-
-  // Product visibility states
-  const [showStormbreaker, setShowStormbreaker] = useState(false);
-  const [showRiptide, setShowRiptide] = useState(false);
-  const [showEclipse, setShowEclipse] = useState(false);
-
   // Icon rotation states
   const [resourcesIconRotation, setResourcesIconRotation] =
     useState("rotate(0deg)");
@@ -32,20 +19,6 @@ const Navbar = () => {
     useState("rotate(0deg)");
   const [ourCouplesIconRotation, setOurCouplesIconRotation] =
     useState("rotate(0deg)");
-  const [familyOffRoadIconRotation, setFamilyOffRoadIconRotation] =
-    useState("rotate(0deg)");
-  const [familyXpTechIconRotation, setFamilyXpTechIconRotation] =
-    useState("rotate(0deg)");
-  const [couplesOffRoadIconRotation, setCouplesOffRoadIconRotation] =
-    useState("rotate(0deg)");
-  const [couplesXpTechIconRotation, setCouplesXpTechIconRotation] =
-    useState("rotate(0deg)");
-  const [stormbreakerIconRotation, setStormbreakerIconRotation] =
-    useState("rotate(90deg)");
-  const [riptideIconRotation, setRiptideIconRotation] =
-    useState("rotate(90deg)");
-  const [eclipseIconRotation, setEclipseIconRotation] =
-    useState("rotate(90deg)");
 
   // Resources menu handlers
   const showResources = () => {
@@ -83,84 +56,6 @@ const Navbar = () => {
     setOurCouplesIconRotation("rotate(0deg)");
   };
 
-  // Family submenu handlers
-  const showFamilyOffRoad = () => {
-    setFamilyOffRoadVisible(true);
-    setFamilyOffRoadIconRotation("rotate(90deg)");
-    setFamilyXpTechVisible(false);
-    setFamilyXpTechIconRotation("rotate(0deg)");
-  };
-
-  const hideFamilyOffRoad = () => {
-    setFamilyOffRoadVisible(false);
-    setFamilyOffRoadIconRotation("rotate(0deg)");
-    setShowStormbreaker(false);
-    setShowRiptide(false);
-  };
-
-  const showFamilyXpTech = () => {
-    setFamilyXpTechVisible(true);
-    setFamilyXpTechIconRotation("rotate(90deg)");
-    setFamilyOffRoadVisible(false);
-    setFamilyOffRoadIconRotation("rotate(0deg)");
-  };
-
-  const hideFamilyXpTech = () => {
-    setFamilyXpTechVisible(false);
-    setFamilyXpTechIconRotation("rotate(0deg)");
-    setShowStormbreaker(false);
-    setShowRiptide(false);
-  };
-
-  // Couples submenu handlers
-  const showCouplesOffRoad = () => {
-    setCouplesOffRoadVisible(true);
-    setCouplesOffRoadIconRotation("rotate(90deg)");
-    setCouplesXpTechVisible(false);
-    setCouplesXpTechIconRotation("rotate(0deg)");
-  };
-
-  const hideCouplesOffRoad = () => {
-    setCouplesOffRoadVisible(false);
-    setCouplesOffRoadIconRotation("rotate(0deg)");
-    setShowEclipse(false);
-  };
-
-  const showCouplesXpTech = () => {
-    setCouplesXpTechVisible(true);
-    setCouplesXpTechIconRotation("rotate(90deg)");
-    setCouplesOffRoadVisible(false);
-    setCouplesOffRoadIconRotation("rotate(0deg)");
-  };
-
-  const hideCouplesXpTech = () => {
-    setCouplesXpTechVisible(false);
-    setCouplesXpTechIconRotation("rotate(0deg)");
-    setShowEclipse(false);
-  };
-
-  // Product menu handlers
-  const toggleStormbreaker = () => {
-    setShowStormbreaker(!showStormbreaker);
-    setShowRiptide(false);
-    setStormbreakerIconRotation(
-      showStormbreaker ? "rotate(90deg)" : "rotate(270deg)"
-    );
-    setRiptideIconRotation("rotate(90deg)");
-  };
-
-  const toggleRiptide = () => {
-    setShowRiptide(!showRiptide);
-    setShowStormbreaker(false);
-    setRiptideIconRotation(showRiptide ? "rotate(90deg)" : "rotate(270deg)");
-    setStormbreakerIconRotation("rotate(90deg)");
-  };
-
-  const toggleEclipse = () => {
-    setShowEclipse(!showEclipse);
-    setEclipseIconRotation(showEclipse ? "rotate(90deg)" : "rotate(270deg)");
-  };
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -175,28 +70,12 @@ const Navbar = () => {
     if (currentMenu !== "family") {
       setOurFamilyVisible(false);
       setOurFamilyIconRotation("rotate(0deg)");
-      setFamilyOffRoadVisible(false);
-      setFamilyXpTechVisible(false);
-      setFamilyOffRoadIconRotation("rotate(0deg)");
-      setFamilyXpTechIconRotation("rotate(0deg)");
     }
 
     if (currentMenu !== "couples") {
       setOurCouplesVisible(false);
       setOurCouplesIconRotation("rotate(0deg)");
-      setCouplesOffRoadVisible(false);
-      setCouplesXpTechVisible(false);
-      setCouplesOffRoadIconRotation("rotate(0deg)");
-      setCouplesXpTechIconRotation("rotate(0deg)");
     }
-
-    // Reset all product menus
-    setShowStormbreaker(false);
-    setShowRiptide(false);
-    setShowEclipse(false);
-    setStormbreakerIconRotation("rotate(90deg)");
-    setRiptideIconRotation("rotate(90deg)");
-    setEclipseIconRotation("rotate(90deg)");
   };
 
   return (
@@ -268,428 +147,17 @@ const Navbar = () => {
                             <ul className="range-list">
                               {/* FAMILY OFF-ROAD SUBMENU */}
                               <li className="nav-item">
-                                <p
-                                  className="social"
-                                  onClick={showFamilyOffRoad}
-                                >
-                                  FAMILY OFF-ROAD{" "}
-                                  <img
-                                    src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
-                                    alt=""
-                                    className="greatericon"
-                                    style={{
-                                      transform: familyOffRoadIconRotation,
-                                    }}
-                                  />
-                                </p>
-
-                                <AnimatePresence>
-                                  {familyOffRoadVisible && (
-                                    <motion.div
-                                      className={`social-media-container ${
-                                        familyOffRoadVisible ? "show" : ""
-                                      }`}
-                                      initial={{ opacity: 0, y: -20 }}
-                                      animate={{ opacity: 1, y: 0 }}
-                                      exit={{ opacity: 0, y: -20 }}
-                                      transition={{ duration: 0.2 }}
-                                    >
-                                      <button
-                                        onClick={hideFamilyOffRoad}
-                                        className="back-button"
-                                      >
-                                        <img
-                                          src="https://deluxcaravan.b-cdn.net/assets/icons/lesser.webp"
-                                          alt=""
-                                          className="lessericon"
-                                        />{" "}
-                                        Back
-                                      </button>
-
-                                      <ul className="range-list">
-                                        {/* STORMBREAKER PRODUCT */}
-                                        <li className="nav-item stormbreaker">
-                                          <p
-                                            className="social"
-                                            onClick={toggleStormbreaker}
-                                          >
-                                            STORMBREAKER{" "}
-                                            <img
-                                              src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
-                                              alt=""
-                                              className="greatericon"
-                                              style={{
-                                                transform:
-                                                  stormbreakerIconRotation,
-                                              }}
-                                            />
-                                          </p>
-                                          <AnimatePresence>
-                                            {showStormbreaker && (
-                                              <motion.div
-                                                className="submenu stombreaker"
-                                                initial={{ opacity: 0, y: 20 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 20 }}
-                                                transition={{ duration: 0.2 }}
-                                              >
-                                                <ul className="submenu-list stormbreaker">
-                                                  <li>
-                                                    <a
-                                                      href="/stormbreaker18"
-                                                      style={{
-                                                        textDecoration: "none",
-                                                        color: "inherit",
-                                                      }}
-                                                    >
-                                                      <img
-                                                        src="https://deluxcaravan.b-cdn.net/assets/header/186.webp"
-                                                        alt="stormbreaker18"
-                                                      />
-                                                      <div>
-                                                        <p>STORMBREAKER 18`6</p>
-                                                        <p>
-                                                          FULL OFF-ROAD: $89,900
-                                                        </p>
-                                                      </div>
-                                                    </a>
-                                                  </li>
-                                                  <li>
-                                                    <a
-                                                      href="/stormbreaker19"
-                                                      style={{
-                                                        textDecoration: "none",
-                                                        color: "inherit",
-                                                      }}
-                                                    >
-                                                      <img
-                                                        src="https://deluxcaravan.b-cdn.net/assets/header/196.webp"
-                                                        alt="stormbreaker19"
-                                                      />
-                                                      <div>
-                                                        <p>STORMBREAKER 19`6</p>
-                                                        <p>
-                                                          FULL OFF-ROAD: $92,900
-                                                        </p>
-                                                      </div>
-                                                    </a>
-                                                  </li>
-                                                  <li>
-                                                    <a
-                                                      href="/stormbreaker21"
-                                                      style={{
-                                                        textDecoration: "none",
-                                                        color: "inherit",
-                                                      }}
-                                                    >
-                                                      <img
-                                                        src="https://deluxcaravan.b-cdn.net/assets/header/216.webp"
-                                                        alt="stormbreaker21"
-                                                      />
-                                                      <div>
-                                                        <p>STORMBREAKER 21`6</p>
-                                                        <p>
-                                                          FULL OFF-ROAD: $94,900
-                                                        </p>
-                                                      </div>
-                                                    </a>
-                                                  </li>
-                                                  <li>
-                                                    <a
-                                                      href="/stormbreaker23"
-                                                      style={{
-                                                        textDecoration: "none",
-                                                        color: "inherit",
-                                                      }}
-                                                    >
-                                                      <img
-                                                        src="https://deluxcaravan.b-cdn.net/assets/header/2311.webp"
-                                                        alt="stormbreaker23"
-                                                      />
-                                                      <div>
-                                                        <p>
-                                                          STORMBREAKER 23`11
-                                                        </p>
-                                                        <p>
-                                                          FULL OFF-ROAD: $96,900
-                                                        </p>
-                                                      </div>
-                                                    </a>
-                                                  </li>
-                                                </ul>
-                                              </motion.div>
-                                            )}
-                                          </AnimatePresence>
-                                        </li>
-
-                                        {/* RIPTIDE PRODUCT */}
-                                        <li className="nav-item riptide">
-                                          <p
-                                            className="social"
-                                            onClick={toggleRiptide}
-                                          >
-                                            RIPTIDE{" "}
-                                            <img
-                                              src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
-                                              alt=""
-                                              className="greatericon"
-                                              style={{
-                                                transform: riptideIconRotation,
-                                              }}
-                                            />
-                                          </p>
-                                          <AnimatePresence>
-                                            {showRiptide && (
-                                              <motion.div
-                                                className="submenu"
-                                                initial={{ opacity: 0, y: 20 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 20 }}
-                                                transition={{ duration: 0.2 }}
-                                              >
-                                                <ul className="submenu-list stormbreaker">
-                                                  <li>
-                                                    <a
-                                                      href="/riptide22"
-                                                      style={{
-                                                        textDecoration: "none",
-                                                        color: "inherit",
-                                                      }}
-                                                    >
-                                                      <img
-                                                        src="https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20header-min.webp"
-                                                        alt="Riptide22"
-                                                      />
-                                                      <div>
-                                                        <p>RIPTIDE 22</p>
-                                                        <p>
-                                                          FULL OFF-ROAD: $98,900
-                                                        </p>
-                                                      </div>
-                                                    </a>
-                                                  </li>
-                                                </ul>
-                                              </motion.div>
-                                            )}
-                                          </AnimatePresence>
-                                        </li>
-                                      </ul>
-                                    </motion.div>
-                                  )}
-                                </AnimatePresence>
+                                <a href="/familyoffroad">
+                                  {" "}
+                                  <p className="social">FAMILY OFF-ROAD </p>
+                                </a>
                               </li>
 
                               {/* FAMILY XP-TECH SUBMENU */}
                               <li className="nav-item">
-                                <p
-                                  className="social"
-                                  onClick={showFamilyXpTech}
-                                >
-                                  FAMILY XP-TECH{" "}
-                                  <img
-                                    src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
-                                    alt=""
-                                    className="greatericon"
-                                    style={{
-                                      transform: familyXpTechIconRotation,
-                                    }}
-                                  />
-                                </p>
-
-                                <AnimatePresence>
-                                  {familyXpTechVisible && (
-                                    <motion.div
-                                      className={`social-media-container ${
-                                        familyXpTechVisible ? "show" : ""
-                                      }`}
-                                      initial={{ opacity: 0, y: -20 }}
-                                      animate={{ opacity: 1, y: 0 }}
-                                      exit={{ opacity: 0, y: -20 }}
-                                      transition={{ duration: 0.2 }}
-                                    >
-                                      <button
-                                        onClick={hideFamilyXpTech}
-                                        className="back-button"
-                                      >
-                                        <img
-                                          src="https://deluxcaravan.b-cdn.net/assets/icons/lesser.webp"
-                                          alt=""
-                                          className="lessericon"
-                                        />{" "}
-                                        Back
-                                      </button>
-
-                                      <ul className="range-list">
-                                        {/* STORMBREAKER PRODUCT */}
-                                        <li className="nav-item stormbreaker">
-                                          <p
-                                            className="social"
-                                            onClick={toggleStormbreaker}
-                                          >
-                                            STORMBREAKER{" "}
-                                            <img
-                                              src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
-                                              alt=""
-                                              className="greatericon"
-                                              style={{
-                                                transform:
-                                                  stormbreakerIconRotation,
-                                              }}
-                                            />
-                                          </p>
-                                          <AnimatePresence>
-                                            {showStormbreaker && (
-                                              <motion.div
-                                                className="submenu stombreaker"
-                                                initial={{ opacity: 0, y: 20 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 20 }}
-                                                transition={{ duration: 0.2 }}
-                                              >
-                                                <ul className="submenu-list stormbreaker">
-                                                  <li>
-                                                    <a
-                                                      href="/stormbreaker18"
-                                                      style={{
-                                                        textDecoration: "none",
-                                                        color: "inherit",
-                                                      }}
-                                                    >
-                                                      <img
-                                                        src="https://deluxcaravan.b-cdn.net/assets/header/186.webp"
-                                                        alt="stormbreaker18"
-                                                      />
-                                                      <div>
-                                                        <p>STORMBREAKER 18`6</p>
-                                                        <p>
-                                                          FULL OFF-ROAD: $89,900
-                                                        </p>
-                                                      </div>
-                                                    </a>
-                                                  </li>
-                                                  <li>
-                                                    <a
-                                                      href="/stormbreaker19"
-                                                      style={{
-                                                        textDecoration: "none",
-                                                        color: "inherit",
-                                                      }}
-                                                    >
-                                                      <img
-                                                        src="https://deluxcaravan.b-cdn.net/assets/header/196.webp"
-                                                        alt="stormbreaker19"
-                                                      />
-                                                      <div>
-                                                        <p>STORMBREAKER 19`6</p>
-                                                        <p>
-                                                          FULL OFF-ROAD: $92,900
-                                                        </p>
-                                                      </div>
-                                                    </a>
-                                                  </li>
-                                                  <li>
-                                                    <a
-                                                      href="/stormbreaker21"
-                                                      style={{
-                                                        textDecoration: "none",
-                                                        color: "inherit",
-                                                      }}
-                                                    >
-                                                      <img
-                                                        src="https://deluxcaravan.b-cdn.net/assets/header/216.webp"
-                                                        alt="stormbreaker21"
-                                                      />
-                                                      <div>
-                                                        <p>STORMBREAKER 21`6</p>
-                                                        <p>
-                                                          FULL OFF-ROAD: $94,900
-                                                        </p>
-                                                      </div>
-                                                    </a>
-                                                  </li>
-                                                  <li>
-                                                    <a
-                                                      href="/stormbreaker23"
-                                                      style={{
-                                                        textDecoration: "none",
-                                                        color: "inherit",
-                                                      }}
-                                                    >
-                                                      <img
-                                                        src="https://deluxcaravan.b-cdn.net/assets/header/2311.webp"
-                                                        alt="stormbreaker23"
-                                                      />
-                                                      <div>
-                                                        <p>
-                                                          STORMBREAKER 23`11
-                                                        </p>
-                                                        <p>
-                                                          FULL OFF-ROAD: $96,900
-                                                        </p>
-                                                      </div>
-                                                    </a>
-                                                  </li>
-                                                </ul>
-                                              </motion.div>
-                                            )}
-                                          </AnimatePresence>
-                                        </li>
-
-                                        {/* RIPTIDE PRODUCT */}
-                                        <li className="nav-item riptide">
-                                          <p
-                                            className="social"
-                                            onClick={toggleRiptide}
-                                          >
-                                            RIPTIDE{" "}
-                                            <img
-                                              src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
-                                              alt=""
-                                              className="greatericon"
-                                              style={{
-                                                transform: riptideIconRotation,
-                                              }}
-                                            />
-                                          </p>
-                                          <AnimatePresence>
-                                            {showRiptide && (
-                                              <motion.div
-                                                className="submenu"
-                                                initial={{ opacity: 0, y: 20 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 20 }}
-                                                transition={{ duration: 0.2 }}
-                                              >
-                                                <ul className="submenu-list stormbreaker">
-                                                  <li>
-                                                    <a
-                                                      href="/riptide22"
-                                                      style={{
-                                                        textDecoration: "none",
-                                                        color: "inherit",
-                                                      }}
-                                                    >
-                                                      <img
-                                                        src="https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20header-min.webp"
-                                                        alt="Riptide22"
-                                                      />
-                                                      <div>
-                                                        <p>RIPTIDE 22</p>
-                                                        <p>
-                                                          FULL OFF-ROAD: $98,900
-                                                        </p>
-                                                      </div>
-                                                    </a>
-                                                  </li>
-                                                </ul>
-                                              </motion.div>
-                                            )}
-                                          </AnimatePresence>
-                                        </li>
-                                      </ul>
-                                    </motion.div>
-                                  )}
-                                </AnimatePresence>
+                                <a href="/familyxptech">
+                                  <p className="social">FAMILY XP-TECH </p>
+                                </a>
                               </li>
                             </ul>
                           </div>
@@ -740,226 +208,16 @@ const Navbar = () => {
                             <ul className="range-list">
                               {/* COUPLES OFF-ROAD SUBMENU */}
                               <li className="nav-item">
-                                <p
-                                  className="social"
-                                  onClick={showCouplesOffRoad}
-                                >
-                                  COUPLES OFF-ROAD{" "}
-                                  <img
-                                    src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
-                                    alt=""
-                                    className="greatericon"
-                                    style={{
-                                      transform: couplesOffRoadIconRotation,
-                                    }}
-                                  />
-                                </p>
-
-                                <AnimatePresence>
-                                  {couplesOffRoadVisible && (
-                                    <motion.div
-                                      className={`social-media-container ${
-                                        couplesOffRoadVisible ? "show" : ""
-                                      }`}
-                                      initial={{ opacity: 0, y: -20 }}
-                                      animate={{ opacity: 1, y: 0 }}
-                                      exit={{ opacity: 0, y: -20 }}
-                                      transition={{ duration: 0.2 }}
-                                    >
-                                      <button
-                                        onClick={hideCouplesOffRoad}
-                                        className="back-button"
-                                      >
-                                        <img
-                                          src="https://deluxcaravan.b-cdn.net/assets/icons/lesser.webp"
-                                          alt=""
-                                          className="lessericon"
-                                        />{" "}
-                                        Back
-                                      </button>
-
-                                      <ul className="range-list">
-                                        {/* ECLIPSE PRODUCT */}
-                                        <li className="nav-item eclipse">
-                                          <p
-                                            className="social"
-                                            onClick={toggleEclipse}
-                                          >
-                                            ECLIPSE{" "}
-                                            <img
-                                              src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
-                                              alt=""
-                                              className="greatericon"
-                                              style={{
-                                                transform: eclipseIconRotation,
-                                              }}
-                                            />
-                                          </p>
-                                          <AnimatePresence>
-                                            {showEclipse && (
-                                              <motion.div
-                                                className="submenu eclipse"
-                                                initial={{ opacity: 0, y: 20 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 20 }}
-                                                transition={{ duration: 0.2 }}
-                                              >
-                                                <ul className="range-list">
-                                                  <li
-                                                    style={{
-                                                      marginBottom: "0px",
-                                                    }}
-                                                  >
-                                                    <a href="/eclipse21">
-                                                      ECLIPSE - 21`6FT
-                                                    </a>
-                                                    <p
-                                                      style={{
-                                                        color: "black",
-                                                        fontSize: "15px",
-                                                      }}
-                                                    >
-                                                      $92,900
-                                                    </p>
-                                                  </li>
-                                                  <li
-                                                    style={{
-                                                      marginBottom: "0px",
-                                                    }}
-                                                  >
-                                                    <a href="/eclipse22">
-                                                      ECLIPSE - 22FT
-                                                    </a>
-                                                    <p
-                                                      style={{
-                                                        color: "black",
-                                                        fontSize: "15px",
-                                                      }}
-                                                    >
-                                                      $98,900
-                                                    </p>
-                                                  </li>
-                                                </ul>
-                                              </motion.div>
-                                            )}
-                                          </AnimatePresence>
-                                        </li>
-                                      </ul>
-                                    </motion.div>
-                                  )}
-                                </AnimatePresence>
+                                <a href="/couplesoffroad">
+                                  <p className="social">COUPLES OFF-ROAD </p>
+                                </a>
                               </li>
 
                               {/* COUPLES XP-TECH SUBMENU */}
                               <li className="nav-item">
-                                <p
-                                  className="social"
-                                  onClick={showCouplesXpTech}
-                                >
-                                  COUPLES XP-TECH{" "}
-                                  <img
-                                    src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
-                                    alt=""
-                                    className="greatericon"
-                                    style={{
-                                      transform: couplesXpTechIconRotation,
-                                    }}
-                                  />
-                                </p>
-
-                                <AnimatePresence>
-                                  {couplesXpTechVisible && (
-                                    <motion.div
-                                      className={`social-media-container ${
-                                        couplesXpTechVisible ? "show" : ""
-                                      }`}
-                                      initial={{ opacity: 0, y: -20 }}
-                                      animate={{ opacity: 1, y: 0 }}
-                                      exit={{ opacity: 0, y: -20 }}
-                                      transition={{ duration: 0.2 }}
-                                    >
-                                      <button
-                                        onClick={hideCouplesXpTech}
-                                        className="back-button"
-                                      >
-                                        <img
-                                          src="https://deluxcaravan.b-cdn.net/assets/icons/lesser.webp"
-                                          alt=""
-                                          className="lessericon"
-                                        />{" "}
-                                        Back
-                                      </button>
-
-                                      <ul className="range-list">
-                                        {/* ECLIPSE PRODUCT */}
-                                        <li className="nav-item eclipse">
-                                          <p
-                                            className="social"
-                                            onClick={toggleEclipse}
-                                          >
-                                            ECLIPSE{" "}
-                                            <img
-                                              src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
-                                              alt=""
-                                              className="greatericon"
-                                              style={{
-                                                transform: eclipseIconRotation,
-                                              }}
-                                            />
-                                          </p>
-                                          <AnimatePresence>
-                                            {showEclipse && (
-                                              <motion.div
-                                                className="submenu eclipse"
-                                                initial={{ opacity: 0, y: 20 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 20 }}
-                                                transition={{ duration: 0.2 }}
-                                              >
-                                                <ul className="range-list">
-                                                  <li
-                                                    style={{
-                                                      marginBottom: "0px",
-                                                    }}
-                                                  >
-                                                    <a href="/eclipse21">
-                                                      ECLIPSE - 21`6FT
-                                                    </a>
-                                                    <p
-                                                      style={{
-                                                        color: "black",
-                                                        fontSize: "15px",
-                                                      }}
-                                                    >
-                                                      $92,900
-                                                    </p>
-                                                  </li>
-                                                  <li
-                                                    style={{
-                                                      marginBottom: "0px",
-                                                    }}
-                                                  >
-                                                    <a href="/eclipse22">
-                                                      ECLIPSE - 22FT
-                                                    </a>
-                                                    <p
-                                                      style={{
-                                                        color: "black",
-                                                        fontSize: "15px",
-                                                      }}
-                                                    >
-                                                      $98,900
-                                                    </p>
-                                                  </li>
-                                                </ul>
-                                              </motion.div>
-                                            )}
-                                          </AnimatePresence>
-                                        </li>
-                                      </ul>
-                                    </motion.div>
-                                  )}
-                                </AnimatePresence>
+                                <a href="/couplesxptech">
+                                  <p className="social">COUPLES XP-TECH </p>
+                                </a>
                               </li>
                             </ul>
                           </div>
@@ -1012,6 +270,9 @@ const Navbar = () => {
                             <li>
                               <a href="/warranty">WARRANTY POLICY</a>
                             </li>
+                            <li>
+                              <a href="/tour">VIRTUAL TOURS</a>
+                            </li>
                           </ul>
                         </motion.div>
                       )}
@@ -1020,7 +281,7 @@ const Navbar = () => {
                   <li className="nav-item" onClick={toggleMenu}>
                     <p className="social">
                       <Link to="/tour" className="nav-link">
-                        VIRTUAL TOURS
+                        XP-TECH
                       </Link>
                     </p>
                   </li>
