@@ -104,7 +104,7 @@ const Eclipse22 = () => {
 This model is equppied with the same luxuries of the other models with even more storage. 
 Built with premium interior, exterior, and mechanical features when you embark on the open road. Trust us, you'll be treated to an exceptionally roomy layout, complete with all the amenities you'd expect from a luxury RV.
             </p>
-            <button
+            {/* <button
               className="btn hover-border-1 revealUp"
               onClick={openWarrantyPopupWarrantyPolicy}
             >
@@ -112,7 +112,7 @@ Built with premium interior, exterior, and mechanical features when you embark o
             </button>
             {isWarrantyPopupOpen && (
               <WarrantyPolicyPopup onClose={closeWarrantyPopupWarrantyPolicy} />
-            )}
+            )} */}
           </div>
           <div className="package-details">
             <p>
