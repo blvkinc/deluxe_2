@@ -7,29 +7,24 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navbarRef = useRef();
 
-  const [ourRangeVisible, setOurRangeVisible] = useState(false);
-  const [ourRangeCouplesVisible, setOurRangeCouplesVisible] = useState(false);
+  // Main menu visibility states
+  const [ourFamilyVisible, setOurFamilyVisible] = useState(false);
+  const [ourCouplesVisible, setOurCouplesVisible] = useState(false);
   const [resourcesVisible, setResourcesVisible] = useState(false);
-  const [showStormbreaker, setShowStormbreaker] = useState(false);
-  const [showRiptide, setShowRiptide] = useState(false);
+
+  // Icon rotation states
   const [resourcesIconRotation, setResourcesIconRotation] =
     useState("rotate(0deg)");
-  const [ourRangeCouplesIconRotation, setOurRangeCouplesIconRotation] =
+  const [ourFamilyIconRotation, setOurFamilyIconRotation] =
     useState("rotate(0deg)");
-  const [ourRangeIconRotation, setOurRangeIconRotation] =
+  const [ourCouplesIconRotation, setOurCouplesIconRotation] =
     useState("rotate(0deg)");
-  const [stormbreakerIconRotation, setStormbreakerIconRotation] =
-    useState("rotate(90deg)");
-  const [riptideIconRotation, setRiptideIconRotation] =
-    useState("rotate(90deg)");
 
+  // Resources menu handlers
   const showResources = () => {
     setResourcesVisible(true);
     setResourcesIconRotation("rotate(90deg)");
-    setOurRangeIconRotation("rotate(0deg)");
-    setOurRangeCouplesIconRotation("rotate(0deg)");
-    setStormbreakerIconRotation("rotate(90deg)");
-    setRiptideIconRotation("rotate(90deg)");
+    resetOtherMenus("resources");
   };
 
   const hideResources = () => {
@@ -37,52 +32,50 @@ const Navbar = () => {
     setResourcesIconRotation("rotate(0deg)");
   };
 
-  const showOurRange = () => {
-    setOurRangeVisible(true);
-    setOurRangeIconRotation("rotate(90deg)");
-    setResourcesIconRotation("rotate(0deg)");
-    setOurRangeCouplesIconRotation("rotate(0deg)");
-    setStormbreakerIconRotation("rotate(90deg)");
-    setRiptideIconRotation("rotate(90deg)");
+  // Family menu handlers
+  const showOurFamily = () => {
+    setOurFamilyVisible(true);
+    setOurFamilyIconRotation("rotate(90deg)");
+    resetOtherMenus("family");
   };
 
-  const hideOurRange = () => {
-    setOurRangeVisible(false);
-    setOurRangeIconRotation("rotate(0deg)");
+  const hideOurFamily = () => {
+    setOurFamilyVisible(false);
+    setOurFamilyIconRotation("rotate(0deg)");
   };
 
-  const showOurRangeCouples = () => {
-    setOurRangeCouplesVisible(true);
-    setOurRangeCouplesIconRotation("rotate(90deg)");
-    setOurRangeIconRotation("rotate(0deg)");
-    setResourcesIconRotation("rotate(0deg)");
-    setStormbreakerIconRotation("rotate(90deg)");
-    setRiptideIconRotation("rotate(90deg)");
+  // Couples menu handlers
+  const showOurCouples = () => {
+    setOurCouplesVisible(true);
+    setOurCouplesIconRotation("rotate(90deg)");
+    resetOtherMenus("couples");
   };
 
-  const hideOurRangeCouples = () => {
-    setOurRangeCouplesVisible(false);
-    setOurRangeCouplesIconRotation("rotate(0deg)");
+  const hideOurCouples = () => {
+    setOurCouplesVisible(false);
+    setOurCouplesIconRotation("rotate(0deg)");
   };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const toggleStormbreaker = () => {
-    setShowStormbreaker(!showStormbreaker);
-    setShowRiptide(false);
-    setStormbreakerIconRotation(
-      showStormbreaker ? "rotate(90deg)" : "rotate(270deg)"
-    );
-    setRiptideIconRotation("rotate(90deg)");
-  };
+  // Helper function to reset other menus when opening a new one
+  const resetOtherMenus = (currentMenu) => {
+    if (currentMenu !== "resources") {
+      setResourcesVisible(false);
+      setResourcesIconRotation("rotate(0deg)");
+    }
 
-  const toggleRiptide = () => {
-    setShowRiptide(!showRiptide);
-    setShowStormbreaker(false);
-    setRiptideIconRotation(showRiptide ? "rotate(90deg)" : "rotate(270deg)");
-    setStormbreakerIconRotation("rotate(90deg)");
+    if (currentMenu !== "family") {
+      setOurFamilyVisible(false);
+      setOurFamilyIconRotation("rotate(0deg)");
+    }
+
+    if (currentMenu !== "couples") {
+      setOurCouplesVisible(false);
+      setOurCouplesIconRotation("rotate(0deg)");
+    }
   };
 
   return (
@@ -111,21 +104,23 @@ const Navbar = () => {
                       />
                     </Link>
                   </li>
+
+                  {/* FAMILY MENU */}
                   <li className="nav-item">
-                    <p className="social" onClick={showOurRange}>
+                    <p className="social" onClick={showOurFamily}>
                       FAMILY{" "}
                       <img
                         src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
                         alt=""
                         className="greatericon"
-                        style={{ transform: ourRangeIconRotation }}
+                        style={{ transform: ourFamilyIconRotation }}
                       />
                     </p>
                     <AnimatePresence>
-                      {ourRangeVisible && (
+                      {ourFamilyVisible && (
                         <motion.div
                           className={`social-media-container ${
-                            ourRangeVisible ? "show" : ""
+                            ourFamilyVisible ? "show" : ""
                           }`}
                           initial={{ opacity: 0, y: -20 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -134,11 +129,11 @@ const Navbar = () => {
                         >
                           <div
                             className={`social-media-container ${
-                              ourRangeVisible ? "show" : ""
+                              ourFamilyVisible ? "show" : ""
                             }`}
                           >
                             <button
-                              onClick={hideOurRange}
+                              onClick={hideOurFamily}
                               className="back-button"
                             >
                               <img
@@ -150,154 +145,19 @@ const Navbar = () => {
                             </button>
 
                             <ul className="range-list">
-                              <li className="nav-item stormbreaker">
-                                <p
-                                  className="social"
-                                  onClick={toggleStormbreaker}
-                                >
-                                  STORMBREAKER{" "}
-                                  <img
-                                    src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
-                                    alt=""
-                                    className="greatericon"
-                                    style={{
-                                      transform: stormbreakerIconRotation,
-                                    }}
-                                  />
-                                </p>
-                                <AnimatePresence>
-                                  {showStormbreaker && (
-                                    <motion.div
-                                      className="submenu stombreaker"
-                                      initial={{ opacity: 0, y: 20 }}
-                                      animate={{ opacity: 1, y: 0 }}
-                                      exit={{ opacity: 0, y: 20 }}
-                                      transition={{ duration: 0.2 }}
-                                    >
-                                      <ul className="submenu-list stormbreaker">
-                                        <li>
-                                          <a
-                                            href="/stormbreaker18"
-                                            style={{
-                                              fontSize: "18px",
-                                            }}
-                                          >
-                                            STORMBREAKER 18`6
-                                          </a>
-                                          <p
-                                            style={{
-                                              color: "black",
-                                              fontSize: "15px",
-                                            }}
-                                          >
-                                            ( FULL OFF-ROAD: $89,900 )
-                                          </p>
-                                        </li>
-                                        <li>
-                                          <a
-                                            href="/stormbreaker19"
-                                            style={{
-                                              fontSize: "18px",
-                                            }}
-                                          >
-                                            STORMBREAKER 19`6
-                                          </a>
-                                          <p
-                                            style={{
-                                              color: "black",
-                                              fontSize: "15px",
-                                            }}
-                                          >
-                                            ( FULL OFF-ROAD: $92,900 )
-                                          </p>
-                                        </li>
-                                        <li>
-                                          <a
-                                            href="/stormbreaker21"
-                                            style={{
-                                              fontSize: "18px",
-                                            }}
-                                          >
-                                            STORMBREAKER 21`6
-                                          </a>
-                                          <p
-                                            style={{
-                                              color: "black",
-                                              fontSize: "15px",
-                                            }}
-                                          >
-                                            ( FULL OFF-ROAD: $94,900 )
-                                          </p>
-                                        </li>
-                                        <li>
-                                          <a
-                                            href="/stormbreaker23"
-                                            style={{
-                                              fontSize: "18px",
-                                            }}
-                                          >
-                                            STORMBREAKER 23`11
-                                          </a>
-                                          <p
-                                            style={{
-                                              color: "black",
-                                              fontSize: "15px",
-                                            }}
-                                          >
-                                            ( FULL OFF-ROAD: $96,900)
-                                          </p>
-                                        </li>
-                                      </ul>
-                                    </motion.div>
-                                  )}
-                                </AnimatePresence>
+                              {/* FAMILY OFF-ROAD SUBMENU */}
+                              <li className="nav-item">
+                                <a href="/familyoffroad">
+                                  {" "}
+                                  <p className="social">FAMILY OFF-ROAD </p>
+                                </a>
                               </li>
-                              <li className="nav-item riptide">
-                                <p className="social" onClick={toggleRiptide}>
-                                  RIPTIDE{" "}
-                                  <img
-                                    src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
-                                    alt=""
-                                    className="greatericon"
-                                    style={{ transform: riptideIconRotation }}
-                                  />
-                                </p>
-                                <AnimatePresence>
-                                  {showRiptide && (
-                                    <motion.div
-                                      className="submenu"
-                                      initial={{
-                                        opacity: 0,
-                                        y: showStormbreaker ? 350 : -20,
-                                      }}
-                                      animate={{ opacity: 1, y: 0 }}
-                                      exit={{
-                                        opacity: 0,
-                                        y: showStormbreaker ? 350 : -20,
-                                      }}
-                                      transition={{ duration: 0.2 }}
-                                    >
-                                      <ul className="submenu-list riptide">
-                                        <li>
-                                          <a
-                                            href="/riptide22"
-                                            style={{ fontSize: "18px" }}
-                                          >
-                                            Riptide 22
-                                          </a>
-                                          <p
-                                            style={{
-                                              color: "black",
-                                              fontSize: "15px",
-                                            }}
-                                          >
-                                            ( FULL OFF-ROAD: $98,900 )
-                                          </p>
-                                        </li>
-                                      </ul>
-                                    </motion.div>
-                                  )}
-                                </AnimatePresence>
+
+                              {/* FAMILY XP-TECH SUBMENU */}
+                              <li className="nav-item">
+                                <a href="/familyxptech">
+                                  <p className="social">FAMILY XP-TECH </p>
+                                </a>
                               </li>
                             </ul>
                           </div>
@@ -305,21 +165,23 @@ const Navbar = () => {
                       )}
                     </AnimatePresence>
                   </li>
+
+                  {/* COUPLES MENU */}
                   <li className="nav-item">
-                    <p className="social" onClick={showOurRangeCouples}>
+                    <p className="social" onClick={showOurCouples}>
                       COUPLES{" "}
                       <img
                         src="https://deluxcaravan.b-cdn.net/assets/icons/greater.webp"
                         alt=""
                         className="greatericon"
-                        style={{ transform: ourRangeCouplesIconRotation }}
+                        style={{ transform: ourCouplesIconRotation }}
                       />
                     </p>
                     <AnimatePresence>
-                      {ourRangeCouplesVisible && (
+                      {ourCouplesVisible && (
                         <motion.div
                           className={`social-media-container ${
-                            ourRangeVisible ? "show" : ""
+                            ourCouplesVisible ? "show" : ""
                           }`}
                           initial={{ opacity: 0, y: -20 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -328,11 +190,11 @@ const Navbar = () => {
                         >
                           <div
                             className={`social-media-container ${
-                              ourRangeCouplesVisible ? "show" : ""
+                              ourCouplesVisible ? "show" : ""
                             }`}
                           >
                             <button
-                              onClick={hideOurRangeCouples}
+                              onClick={hideOurCouples}
                               className="back-button"
                             >
                               <img
@@ -342,36 +204,20 @@ const Navbar = () => {
                               />{" "}
                               Back
                             </button>
+
                             <ul className="range-list">
-                              <li
-                                style={{
-                                  marginBottom: "0px",
-                                }}
-                              >
-                                <a href="/eclipse21">ECLIPSE - 21`6FT</a>
-                                <p
-                                  style={{
-                                    color: "black",
-                                    fontSize: "15px",
-                                  }}
-                                >
-                                  ( $92,900 )
-                                </p>
+                              {/* COUPLES OFF-ROAD SUBMENU */}
+                              <li className="nav-item">
+                                <a href="/couplesoffroad">
+                                  <p className="social">COUPLES OFF-ROAD </p>
+                                </a>
                               </li>
-                              <li
-                                style={{
-                                  marginBottom: "0px",
-                                }}
-                              >
-                                <a href="/eclipse22">ECLIPSE - 22FT</a>
-                                <p
-                                  style={{
-                                    color: "black",
-                                    fontSize: "15px",
-                                  }}
-                                >
-                                  ( $98,900 )
-                                </p>
+
+                              {/* COUPLES XP-TECH SUBMENU */}
+                              <li className="nav-item">
+                                <a href="/couplesxptech">
+                                  <p className="social">COUPLES XP-TECH </p>
+                                </a>
                               </li>
                             </ul>
                           </div>
@@ -424,6 +270,9 @@ const Navbar = () => {
                             <li>
                               <a href="/warranty">WARRANTY POLICY</a>
                             </li>
+                            <li>
+                              <a href="/tour">VIRTUAL TOURS</a>
+                            </li>
                           </ul>
                         </motion.div>
                       )}
@@ -432,7 +281,7 @@ const Navbar = () => {
                   <li className="nav-item" onClick={toggleMenu}>
                     <p className="social">
                       <Link to="/tour" className="nav-link">
-                        VIRTUAL TOURS
+                        XP-TECH
                       </Link>
                     </p>
                   </li>
