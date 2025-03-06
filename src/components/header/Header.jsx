@@ -8,7 +8,7 @@ import Navbar from "./mobileNavbar/Navbar";
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [isMobile, setIsMobile] = useState(
-    useMemo(() => window.innerWidth <= 768, []),
+    useMemo(() => window.innerWidth <= 768, [])
   );
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
@@ -22,7 +22,7 @@ const Header = () => {
       setWindowWidth(newWidth);
       setIsMobile(newWidth <= 768);
     }, 200),
-    [],
+    []
   );
 
   useEffect(() => {
@@ -71,7 +71,7 @@ const Header = () => {
       setVisible(
         (prevScrollPos > currentScrollPos &&
           prevScrollPos - currentScrollPos > 70) ||
-          currentScrollPos < 10,
+          currentScrollPos < 10
       );
       setPrevScrollPos(currentScrollPos);
     }, 200);
@@ -101,6 +101,7 @@ const Header = () => {
         submenu: [
           {
             label: "FAMILY OFF-ROAD",
+            link: "/familyoffroad",
             submenu: [
               {
                 label: "STORMBREAKER",
@@ -173,6 +174,7 @@ const Header = () => {
           },
           {
             label: "FAMILY XP-TECH",
+            link: "/familyxptech",
             submenu: [
               {
                 label: "STORMBREAKER",
@@ -251,6 +253,7 @@ const Header = () => {
         submenu: [
           {
             label: "COUPLES OFF-ROAD",
+            link: "/couplesoffroad",
             submenu: [
               {
                 label: "ECLIPSE",
@@ -278,6 +281,7 @@ const Header = () => {
           },
           {
             label: "COUPLES XP-TECH",
+            link: "/couplesxptech",
             submenu: [
               {
                 label: "ECLIPSE",
@@ -401,7 +405,7 @@ const Header = () => {
         ],
       },
     ],
-    [],
+    []
   );
 
   return (
@@ -480,7 +484,7 @@ const Header = () => {
                               >
                                 <span
                                   className={`submenu-label ${String(
-                                    subitem.label,
+                                    subitem.label
                                   ).toLowerCase()}`}
                                 >
                                   {subitem.label}
@@ -504,7 +508,7 @@ const Header = () => {
                                             key={nestedIndex}
                                             onMouseEnter={() =>
                                               handleNestedSubMenuHover(
-                                                nestedSubitem.label,
+                                                nestedSubitem.label
                                               )
                                             }
                                             onMouseLeave={() =>
@@ -557,7 +561,7 @@ const Header = () => {
                                                       {nestedSubitem.submenu.map(
                                                         (
                                                           deepNestedSubitem,
-                                                          deepIndex,
+                                                          deepIndex
                                                         ) => (
                                                           <Link
                                                             key={deepIndex}
@@ -606,14 +610,14 @@ const Header = () => {
                                                               )}
                                                             </motion.div>
                                                           </Link>
-                                                        ),
+                                                        )
                                                       )}
                                                     </motion.div>
                                                   )}
                                               </motion.div>
                                             </Link>
                                           </div>
-                                        ),
+                                        )
                                       )}
                                     </motion.div>
                                   )}
