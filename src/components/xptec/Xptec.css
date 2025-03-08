@@ -16,7 +16,6 @@
   text-align: left;
   padding-left: 10vw;
   padding-right: 10vw;
-  scroll-snap-align: none;
 }
 
 /* Style heading and paragraph elements within the components */
@@ -41,11 +40,4 @@
 .warrantycomponent li {
   font-size: 1rem; /* Set a font size for list items */
   margin-bottom: 5px; /* Add space between list items */
-}
-
-/* Desktop and larger screens only */
-@media (min-width: 1024px) {
-  .warrantycomponent {
-    scroll-snap-align: start !important;
-  }
 }

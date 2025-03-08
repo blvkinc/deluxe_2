@@ -1,3 +1,14 @@
+.productgrid-container {
+  display: flex;
+  flex-direction: column;
+}
+.productgrid-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10%;
+}
 .product-grid {
   display: grid;
   gap: 20px;
@@ -55,10 +66,6 @@
 @media (max-width: 600px) {
   .product-grid {
     grid-template-columns: repeat(1, 1fr);
-  }
-  .product-card {
-    width: 100%;
-    height: auto;
   }
   .product-grid-heading {
     padding-top: 10%;

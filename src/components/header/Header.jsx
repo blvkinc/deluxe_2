@@ -33,14 +33,18 @@ const Header = () => {
   }, [handleResize]);
 
   const handleMenuHover = useCallback((menu) => {
-    setActiveMenu(menu);
-    setHoveredSubMenu(null); // Reset submenu on parent menu hover
-    setNestedSubMenu(null); // Reset nested submenu
+    setTimeout(() => {
+      setActiveMenu(menu);
+      setHoveredSubMenu(null);
+      setNestedSubMenu(null);
+    }, 100);
   }, []);
 
   const handleSubMenuHover = useCallback((submenuLabel) => {
-    setHoveredSubMenu(submenuLabel);
-    setNestedSubMenu(null);
+    setTimeout(() => {
+      setHoveredSubMenu(submenuLabel);
+      setNestedSubMenu(null);
+    }, 100);
   }, []);
 
   const handleNestedSubMenuHover = useCallback((nestedSubmenuLabel) => {
@@ -48,21 +52,11 @@ const Header = () => {
   }, []);
 
   const handleMenuLeave = useCallback(() => {
-    // Only close the menu if the cursor is not over any submenu or nested submenu
-    if (!hoveredSubMenu && !nestedSubMenu) {
+    setTimeout(() => {
       setActiveMenu(null);
-    }
-  }, [hoveredSubMenu, nestedSubMenu]);
-
-  const handleSubMenuLeave = useCallback(() => {
-    // Only close the submenu if the cursor is not over any nested submenu
-    if (!nestedSubMenu) {
       setHoveredSubMenu(null);
-    }
-  }, [nestedSubMenu]);
-
-  const handleNestedSubMenuLeave = useCallback(() => {
-    setNestedSubMenu(null);
+      setNestedSubMenu(null);
+    }, 100);
   }, []);
 
   useEffect(() => {
@@ -83,7 +77,6 @@ const Header = () => {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      // Check if the mouse is within 50 pixels of the top of the page
       if (e.clientY < 80) {
         setVisible(true);
       }
@@ -114,7 +107,7 @@ const Header = () => {
                         alt="stormbreaker18"
                       />
                     ),
-                    link: "/stormbreaker18",
+                    link: "/stormbreaker18familyoffroad",
                     text: "Stormbreaker 18`6",
                     price: "FULL OFF-ROAD: $89,900",
                   },
@@ -125,7 +118,7 @@ const Header = () => {
                         alt="stormbreaker19"
                       />
                     ),
-                    link: "/stormbreaker19",
+                    link: "/stormbreaker19familyoffroad",
                     text: "Stormbreaker 19`6",
                     price: "FULL OFF-ROAD: $92,900",
                   },
@@ -136,7 +129,7 @@ const Header = () => {
                         alt="stormbreaker21"
                       />
                     ),
-                    link: "/stormbreaker21",
+                    link: "/stormbreaker21familyoffroad",
                     text: "Stormbreaker 21`6",
                     price: "FULL OFF-ROAD: $94,900",
                   },
@@ -147,7 +140,7 @@ const Header = () => {
                         alt="stormbreaker23"
                       />
                     ),
-                    link: "/stormbreaker23",
+                    link: "/stormbreaker23familyoffroad",
                     text: "Stormbreaker 23`11",
                     price: "FULL OFF-ROAD: $96,900",
                   },
@@ -164,7 +157,7 @@ const Header = () => {
                         alt="Riptide22"
                       />
                     ),
-                    link: "/riptide22",
+                    link: "/riptide22familyoffroad",
                     text: "Riptide 22",
                     price: "FULL OFF-ROAD: $98,900",
                   },
@@ -187,7 +180,7 @@ const Header = () => {
                         alt="stormbreaker18"
                       />
                     ),
-                    link: "/stormbreaker18",
+                    link: "/stormbreaker18familyxptech",
                     text: "Stormbreaker 18`6",
                     price: "FULL OFF-ROAD: $89,900",
                   },
@@ -198,7 +191,7 @@ const Header = () => {
                         alt="stormbreaker19"
                       />
                     ),
-                    link: "/stormbreaker19",
+                    link: "/stormbreaker19familyxptech",
                     text: "Stormbreaker 19`6",
                     price: "FULL OFF-ROAD: $92,900",
                   },
@@ -209,7 +202,7 @@ const Header = () => {
                         alt="stormbreaker21"
                       />
                     ),
-                    link: "/stormbreaker21",
+                    link: "/stormbreaker21familyxptech",
                     text: "Stormbreaker 21`6",
                     price: "FULL OFF-ROAD: $94,900",
                   },
@@ -220,7 +213,7 @@ const Header = () => {
                         alt="stormbreaker23"
                       />
                     ),
-                    link: "/stormbreaker23",
+                    link: "/stormbreaker23familyxptech",
                     text: "Stormbreaker 23`11",
                     price: "FULL OFF-ROAD: $96,900",
                   },
@@ -237,7 +230,7 @@ const Header = () => {
                         alt="Riptide22"
                       />
                     ),
-                    link: "/riptide22",
+                    link: "/riptide22familyxptech",
                     text: "Riptide 22",
                     price: "FULL OFF-ROAD: $98,900",
                   },
@@ -266,12 +259,12 @@ const Header = () => {
                         alt="Eclipse 216"
                       />
                     ),
-                    link: "/eclipse21",
+                    link: "/eclipse21couplesoffroad",
                     text: "ECLIPSE - 21`6FT",
                     price: "$92,900",
                   },
                   {
-                    link: "/eclipse22",
+                    link: "/eclipse22couplesoffroad",
                     text: "ECLIPSE - 22FT",
                     price: "$98,900",
                   },
@@ -294,12 +287,12 @@ const Header = () => {
                         alt="Eclipse 216"
                       />
                     ),
-                    link: "/eclipse21",
+                    link: "/eclipse21couplesxptech",
                     text: "ECLIPSE - 21`6FT",
                     price: "$92,900",
                   },
                   {
-                    link: "/eclipse22",
+                    link: "/eclipse22couplesxptech",
                     text: "ECLIPSE - 22FT",
                     price: "$98,900",
                   },
@@ -423,6 +416,7 @@ const Header = () => {
               : { backgroundColor: "transparent" }
           }
           transition={{ duration: 0.5 }}
+          onMouseLeave={handleMenuLeave} // Reset states when leaving the entire header
         >
           <div className="header-logo">
             <Link to="/">
@@ -433,7 +427,10 @@ const Header = () => {
               />
             </Link>
           </div>
-          <nav className="header-nav">
+          <nav
+            className="header-nav"
+            onMouseLeave={handleMenuLeave} // Reset states when leaving the entire menu
+          >
             <ul className="menu">
               {menuData.map((menu, index) => (
                 <motion.li
@@ -442,10 +439,10 @@ const Header = () => {
                     activeMenu === menu.label ? "active" : ""
                   }`}
                   onMouseEnter={() => handleMenuHover(menu.label)}
-                  onMouseLeave={handleMenuLeave}
                   initial={{ opacity: 1 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
                   <button>
                     <span>{menu.label}</span>
@@ -457,7 +454,7 @@ const Header = () => {
                         initial={{ opacity: 1, scaleY: 0 }}
                         animate={{ opacity: 1, scaleY: 1 }}
                         exit={{ opacity: 0, scaleY: 0 }}
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
                       >
                         {menu.submenu.map((subitem, subIndex) => (
                           <div
@@ -465,7 +462,6 @@ const Header = () => {
                             onMouseEnter={() =>
                               handleSubMenuHover(subitem.label)
                             }
-                            onMouseLeave={handleSubMenuLeave}
                           >
                             <Link to={subitem.link || "#"}>
                               <motion.div
@@ -491,7 +487,6 @@ const Header = () => {
                                 </span>
                                 {subitem.text && <h3>{subitem.text}</h3>}
                                 {subitem.price && <h5>{subitem.price}</h5>}
-
                                 {/* Nested Submenu */}
                                 {hoveredSubMenu === subitem.label &&
                                   subitem.submenu && (
@@ -500,7 +495,10 @@ const Header = () => {
                                       initial={{ opacity: 1, scaleY: 0 }}
                                       animate={{ opacity: 1, scaleY: 1 }}
                                       exit={{ opacity: 0, scaleY: 0 }}
-                                      transition={{ duration: 0.3 }}
+                                      transition={{
+                                        duration: 0.3,
+                                        ease: "easeInOut",
+                                      }}
                                     >
                                       {subitem.submenu.map(
                                         (nestedSubitem, nestedIndex) => (
@@ -510,9 +508,6 @@ const Header = () => {
                                               handleNestedSubMenuHover(
                                                 nestedSubitem.label
                                               )
-                                            }
-                                            onMouseLeave={() =>
-                                              setNestedSubMenu(null)
                                             }
                                           >
                                             <Link
@@ -556,7 +551,11 @@ const Header = () => {
                                                       }}
                                                       transition={{
                                                         duration: 0.3,
+                                                        ease: "easeInOut",
                                                       }}
+                                                      onMouseLeave={() =>
+                                                        setNestedSubMenu(null)
+                                                      } // Reset nestedSubMenu when leaving deep nested submenu
                                                     >
                                                       {nestedSubitem.submenu.map(
                                                         (
@@ -632,12 +631,16 @@ const Header = () => {
               ))}
               <li className="menu-item">
                 <Link to="/Xptec">
-                  <button>XP-TECH</button>
+                  <button onMouseEnter={() => handleMenuHover("XP-TECH")}>
+                    XP-TECH
+                  </button>
                 </Link>
               </li>
               <li className="menu-item">
                 <Link to="/contact">
-                  <button>CONTACT</button>
+                  <button onMouseEnter={() => handleMenuHover("CONTACT")}>
+                    CONTACT
+                  </button>
                 </Link>
               </li>
             </ul>

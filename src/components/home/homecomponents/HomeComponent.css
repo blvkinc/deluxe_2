@@ -13,7 +13,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: none;
 }
 
 .desccomponent {
@@ -160,13 +159,6 @@
 
 .image-item.current {
   border: 2px solid rgb(255, 255, 255); /* Highlight the current image */
-}
-
-/* Desktop and larger screens only */
-@media (min-width: 1024px) {
-  .component2 {
-    scroll-snap-align: start !important;
-  }
 }
 
 /* Media query for mobile screens */

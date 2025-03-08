@@ -11,7 +11,6 @@
   width: 100%; /* Take up the full width of the container */
   max-width: 800px; /* Limit the maximum width */
   text-align: center; /* Center the content horizontally */
-  /* scroll-snap-align: none; */
 }
 
 .dropdown-container {
@@ -86,12 +85,5 @@
 @media (max-width: 1600px) {
   .virtualcomponent {
     padding-top: 10vh;
-  }
-}
-
-/* Desktop and larger screens only */
-@media (min-width: 1024px) {
-  .virtualcomponent {
-    /* scroll-snap-align: start !important; */
   }
 }

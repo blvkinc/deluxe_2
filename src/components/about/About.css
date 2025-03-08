@@ -48,16 +48,7 @@
   text-transform: lowercase !important;
 }
 
-/* Default: no scroll snap for all screen sizes */
 .ourval {
-  scroll-snap-align: none;
-}
-
-/* Desktop and larger screens only */
-@media (min-width: 1024px) {
-  .ourval {
-    scroll-snap-align: start !important;
-  }
 }
 
 @media (max-width: 768px) {

@@ -11,13 +11,9 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   overflow: visible; /* Show overflow content */
   height: auto; /* Auto height for the header */
-  scroll-snap-align: none;
 }
 
 .header:hover {
@@ -28,9 +24,7 @@
 
 .header.hidden {
   transform: translateY(-100%);
-  transition:
-    transform 0.3s ease,
-    visibility 0.3s ease;
+  transition: transform 0.3s ease, visibility 0.3s ease;
 }
 
 .header img {
@@ -63,7 +57,7 @@ h5 {
   color: #ffffff;
   justify-content: space-evenly;
   cursor: pointer;
-  transition: opacity 0.3s; /* Added opacity transition */
+  transition: color 0.3s ease, font-weight 0.3s ease;
   margin-right: 3rem;
 }
 
@@ -81,33 +75,28 @@ h5 {
   position: relative; /* Add relative position */
 }
 
-.header-nav .menu-item button:hover {
-  color: #000000;
+.header:hover .header-nav .menu-item button {
+  color: #000000; /* Change color when menu is hovered */
 }
 
 .menu-item.active button {
   font-weight: 700;
-  color: #000000;
 }
 
 .sub-menu-item.active-submenu {
   font-weight: 700;
-  color: #000000;
 }
 
 .nested-submenu-item.active-nested-submenu {
   font-weight: 700;
-  color: #000000;
 }
 
 .deep-nested-submenu-item.active-deep-nested-submenu {
   font-weight: 700;
-  color: #000000;
 }
 
 .menu-item a button:hover {
   font-weight: 700;
-  color: #000000;
 }
 
 /* Shared styles for sub-menu and nested-submenu */
@@ -119,10 +108,7 @@ h5 {
   visibility: hidden;
   transform: scaleY(0);
   transform-origin: top;
-  transition:
-    opacity 0.2s,
-    visibility 0.2s,
-    transform 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
   width: 100%;
   position: fixed;
   top: 75px;
@@ -144,9 +130,7 @@ h5 {
 .nested-submenu-item {
   opacity: 0;
   transform: translateY(-10px);
-  transition:
-    opacity 0.5s,
-    transform 0.3s ease;
+  transition: opacity 0.5s, transform 0.3s ease;
   margin-right: 30px;
 }
 
@@ -156,10 +140,7 @@ h5 {
   opacity: 1;
   visibility: visible;
   transform: scaleY(1);
-  transition:
-    opacity 0.5s,
-    visibility 0.3s,
-    transform 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
 /* Active state for sub-menu-item and nested-submenu-item */
@@ -167,7 +148,7 @@ h5 {
 .menu-item.active .nested-submenu-item {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.5s ease;
+  transition-delay: 0.1s ease;
 }
 
 /* Specific styles for nested-submenu (applied to deep-nested-submenu as well) */
@@ -183,10 +164,7 @@ h5 {
   visibility: hidden;
   transform: scaleY(0);
   transform-origin: top;
-  transition:
-    opacity 0.2s,
-    visibility 0.2s,
-    transform 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
   width: 100%;
   position: fixed;
   top: 170px;
@@ -205,9 +183,7 @@ h5 {
 .deep-nested-submenu-item {
   opacity: 0;
   transform: translateY(-10px);
-  transition:
-    opacity 0.5s,
-    transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   margin-right: 30px;
 }
 
@@ -216,10 +192,7 @@ h5 {
   opacity: 1;
   visibility: visible;
   transform: scaleY(1);
-  transition:
-    opacity 0.5s,
-    visibility 0.3s,
-    transform 0.3s ease;
+  transition: opacity 0.5s, visibility 0.3s, transform 0.3s ease;
 }
 
 /* Active state for deep nested submenu items */
@@ -274,12 +247,5 @@ h5 {
     position: fixed;
     top: 1rem;
     left: 5rem;
-  }
-}
-
-/* Desktop and larger screens only */
-@media (min-width: 1024px) {
-  .header {
-    /* scroll-snap-align: start !important; */
   }
 }

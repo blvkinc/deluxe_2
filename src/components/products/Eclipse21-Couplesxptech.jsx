@@ -2,11 +2,11 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import "./Products.css";
 import "../home/Home.css";
 import "../home/homecomponents/HomeComponent.css";
-import Strom23inside from "../products/SlideShows/Stormbreaker23inside";
+import Eclipse21gallery from "../products/SlideShows/Eclipse21gallery";
 import { gsap } from "gsap";
 import GoToTop from "../functions/GoToTop";
-import Storm23specs from "./Specsmenu/Specs23";
-import Techspec23 from "./techspecs/Techspec23";
+import SpecsEclipse21 from "./Specsmenu/SpecsEclipse21";
+import TechspecEclipse21 from "./techspecs/TechspecEclipse21";
 import WarrantyPolicyPopup from "./popup/WarrantyPolicyPopUp";
 
 const scrollToSpecs = () => {
@@ -23,7 +23,7 @@ const scrollToLayout = () => {
   }
 };
 
-const Stormbreaker23 = () => {
+const Eclipse21CouplesXPTech = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -62,12 +62,12 @@ const Stormbreaker23 = () => {
       <div className="component">
         <div className="background-image">
           <img
-            src="https://deluxcaravan.b-cdn.net/assets/Product%20renders/SB2311Exterior.webp"
+            src="https://deluxcaravan.b-cdn.net/assets/Product%20renders/Eclipse216.webp"
             alt=""
           />
           <div className="image-overlay">
             <div className="button-container">
-              <h1 className="Product-header revealUp">Stormbreaker23`11</h1>
+              <h1 className="Product-header revealUp">Eclipse 21`6</h1>
               <button
                 onClick={scrollToLayout}
                 className="btn hover-border-1 revealUp"
@@ -86,7 +86,7 @@ const Stormbreaker23 = () => {
       </div>
 
       <div className="slideshowcomopnent">
-        <Strom23inside />
+        <Eclipse21gallery />
       </div>
       {/* <div className='slideshowcomopnent'>
     </div> */}
@@ -100,16 +100,14 @@ const Stormbreaker23 = () => {
         >
           <div className="description">
             <p>
-              Got more than 3 kids or always wanted buy a caravan with a
-              spacious living space for your kids. Look no further than our
-              Stormbreaker 23&#39;11, the solution you&#39;ve been seeking. This
-              model offers all the remarkable features unique to this family
-              bunk model. A key feature that set this model apart it the large,
-              separate ensuite at the rear. Built with premium interior,
-              exterior, and mechanical features when you embark on the open road
-              with your loved ones, you&#39;ll be treated to an exceptionally
-              roomy layout, complete with all the amenities you&#39;d expect
-              from a luxury RV.
+              Introducing our first 2 Berth Caravan and we can tell you it’s a
+              special one. The most notable feature is the massive rear ensuite.
+              Ideal for a couple who loves to travel for extended periods of
+              time. Then again this an ideal setup for anyone who likes life on
+              the road.Built with premium interior, exterior, and mechanical
+              features when you embark on the open road with your loved ones,
+              you&#39;ll be treated to an exceptionally roomy layout, complete
+              with all the amenities you&#39;d expect from a luxury RV.
             </p>
             {/* <button
               className="btn hover-border-1 revealUp"
@@ -138,15 +136,18 @@ const Stormbreaker23 = () => {
         </div>
       </div>
       <div className="component" id="specs">
-        <Techspec23 />
+        <TechspecEclipse21 />
       </div>
       <div className="component" id="specs">
         <h1>Specs Menu</h1>
-        <Storm23specs />
+        <SpecsEclipse21 />
+      </div>
+      <div className="component" id="xptechbanner">
+        <h1>XP Tech Banner goes here</h1>
       </div>
       <GoToTop />
     </div>
   );
 };
 
-export default React.memo(Stormbreaker23);
+export default React.memo(Eclipse21CouplesXPTech);
