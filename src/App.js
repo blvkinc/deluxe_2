@@ -71,6 +71,7 @@ const Stormbreaker23FamilyXPTech = lazy(() =>
 const Contact = lazy(() => import("./components/contact/Contact"));
 const Appointment = lazy(() => import("./components/bookus/Appointment"));
 const Tour = lazy(() => import("./components/tour/Tour"));
+const Xptec = lazy(() => import("./components/xptec/Xptec"));
 const Warranty = lazy(() =>
   import("./components/warrantypolicy/WarrantyPolicy")
 );
@@ -167,6 +168,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/appointment" element={<Appointment />} />
             <Route path="/tour" element={<Tour />} />
+            <Route path="/Xptec" element={<Xptec />} />
             <Route path="/warranty" element={<Warranty />} />
             <Route path="/familyoffroad" element={<Familyoffroad />} />
             <Route path="/familyxptech" element={<Familyxptech />} />
