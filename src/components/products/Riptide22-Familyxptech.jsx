@@ -2,11 +2,11 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import "./Products.css";
 import "../home/Home.css";
 import "../home/homecomponents/HomeComponent.css";
-import Eclipse22gallery from "../products/SlideShows/Eclipse22gallery";
+import Riptide22inside from "./SlideShows/Riptide22gallery";
 import { gsap } from "gsap";
 import GoToTop from "../functions/GoToTop";
-import SpecsEclipse22 from "./Specsmenu/SpecsEclipse22";
-import TechspecEclipse22 from "./techspecs/TechspecEclipse22";
+import Rip22specs from "./Specsmenu/SpecsRiptide22";
+import TechspecRiptide22 from "./techspecs/TechspecRiptide22";
 import WarrantyPolicyPopup from "./popup/WarrantyPolicyPopUp";
 
 const scrollToSpecs = () => {
@@ -23,7 +23,7 @@ const scrollToLayout = () => {
   }
 };
 
-const Eclipse22 = () => {
+const Riptide22FamilyXPTech = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -62,12 +62,12 @@ const Eclipse22 = () => {
       <div className="component">
         <div className="background-image">
           <img
-            src="https://deluxcaravan.b-cdn.net/assets/E22/eclipse22_ex_6-min.webp"
+            src="https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp"
             alt=""
           />
           <div className="image-overlay">
             <div className="button-container">
-              <h1 className="Product-header revealUp">Eclipse 22`</h1>
+              <h1 className="Product-header revealUp">RIPTIDE 22`</h1>
               <button
                 onClick={scrollToLayout}
                 className="btn hover-border-1 revealUp"
@@ -86,7 +86,7 @@ const Eclipse22 = () => {
       </div>
 
       <div className="slideshowcomopnent">
-        <Eclipse22gallery />
+        <Riptide22inside />
       </div>
       {/* <div className='slideshowcomopnent'>
     </div> */}
@@ -100,9 +100,23 @@ const Eclipse22 = () => {
         >
           <div className="description">
             <p>
-            Introducing our biggest ans most spacious 2 Berth Caravan.An impressive feature is the seperate main bed and the rear lounge area that extends the width of the caravan. Ideal for a couple who like to enjoy time with fellow caravaners or just like the extra space. 
-This model is equppied with the same luxuries of the other models with even more storage. 
-Built with premium interior, exterior, and mechanical features when you embark on the open road. Trust us, you'll be treated to an exceptionally roomy layout, complete with all the amenities you'd expect from a luxury RV.
+              Are you on the hunt for a more spacious family bunk caravan? Your
+              search ends here with the Riptide 22``, the solution you've been
+              seeking. This model offers all the remarkable features found in
+              our Stormbreaker range. Every journey transforms into an
+              unforgettable experience, thanks to its premium built interior,
+              exterior, and mechanical features. when you embark on the open
+              road with your loved ones, you'll be treated to an exceptionally
+              roomy layout, complete with all the amenities you'd expect from a
+              luxury RV adventure. But our commitment doesn't end there- we
+              ensure your adventures leave no environmental footprint. With
+              eco-friendly features, you can travel without guilt and experience
+              all the joy you deserve.
+            </p>
+            <p>
+              <button className="virtual-btn">
+                <a href="/tour">Have a look at RIPTIDE 22`</a>
+              </button>
             </p>
             {/* <button
               className="btn hover-border-1 revealUp"
@@ -131,15 +145,15 @@ Built with premium interior, exterior, and mechanical features when you embark o
         </div>
       </div>
       <div className="component" id="specs">
-        <TechspecEclipse22 />
+        <TechspecRiptide22 />
       </div>
       <div className="component" id="specs">
         <h1>Specs Menu</h1>
-        <SpecsEclipse22 />
+        <Rip22specs />
       </div>
       <GoToTop />
     </div>
   );
 };
 
-export default React.memo(Eclipse22);
+export default React.memo(Riptide22FamilyXPTech);

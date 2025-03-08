@@ -114,7 +114,7 @@ const Header = () => {
                         alt="stormbreaker18"
                       />
                     ),
-                    link: "/stormbreaker18",
+                    link: "/stormbreaker18familyoffroad",
                     text: "Stormbreaker 18`6",
                     price: "FULL OFF-ROAD: $89,900",
                   },
@@ -125,7 +125,7 @@ const Header = () => {
                         alt="stormbreaker19"
                       />
                     ),
-                    link: "/stormbreaker19",
+                    link: "/stormbreaker19familyoffroad",
                     text: "Stormbreaker 19`6",
                     price: "FULL OFF-ROAD: $92,900",
                   },
@@ -136,7 +136,7 @@ const Header = () => {
                         alt="stormbreaker21"
                       />
                     ),
-                    link: "/stormbreaker21",
+                    link: "/stormbreaker21familyoffroad",
                     text: "Stormbreaker 21`6",
                     price: "FULL OFF-ROAD: $94,900",
                   },
@@ -147,7 +147,7 @@ const Header = () => {
                         alt="stormbreaker23"
                       />
                     ),
-                    link: "/stormbreaker23",
+                    link: "/stormbreaker23familyoffroad",
                     text: "Stormbreaker 23`11",
                     price: "FULL OFF-ROAD: $96,900",
                   },
@@ -164,7 +164,7 @@ const Header = () => {
                         alt="Riptide22"
                       />
                     ),
-                    link: "/riptide22",
+                    link: "/riptide22familyoffroad",
                     text: "Riptide 22",
                     price: "FULL OFF-ROAD: $98,900",
                   },
@@ -187,7 +187,7 @@ const Header = () => {
                         alt="stormbreaker18"
                       />
                     ),
-                    link: "/stormbreaker18",
+                    link: "/stormbreaker18familyxptech",
                     text: "Stormbreaker 18`6",
                     price: "FULL OFF-ROAD: $89,900",
                   },
@@ -198,7 +198,7 @@ const Header = () => {
                         alt="stormbreaker19"
                       />
                     ),
-                    link: "/stormbreaker19",
+                    link: "/stormbreaker19familyxptech",
                     text: "Stormbreaker 19`6",
                     price: "FULL OFF-ROAD: $92,900",
                   },
@@ -209,7 +209,7 @@ const Header = () => {
                         alt="stormbreaker21"
                       />
                     ),
-                    link: "/stormbreaker21",
+                    link: "/stormbreaker21familyxptech",
                     text: "Stormbreaker 21`6",
                     price: "FULL OFF-ROAD: $94,900",
                   },
@@ -220,7 +220,7 @@ const Header = () => {
                         alt="stormbreaker23"
                       />
                     ),
-                    link: "/stormbreaker23",
+                    link: "/stormbreaker23familyxptech",
                     text: "Stormbreaker 23`11",
                     price: "FULL OFF-ROAD: $96,900",
                   },
@@ -237,7 +237,7 @@ const Header = () => {
                         alt="Riptide22"
                       />
                     ),
-                    link: "/riptide22",
+                    link: "/riptide22familyxptech",
                     text: "Riptide 22",
                     price: "FULL OFF-ROAD: $98,900",
                   },
@@ -266,12 +266,12 @@ const Header = () => {
                         alt="Eclipse 216"
                       />
                     ),
-                    link: "/eclipse21",
+                    link: "/eclipse21couplesoffroad",
                     text: "ECLIPSE - 21`6FT",
                     price: "$92,900",
                   },
                   {
-                    link: "/eclipse22",
+                    link: "/eclipse22couplesoffroad",
                     text: "ECLIPSE - 22FT",
                     price: "$98,900",
                   },
@@ -294,12 +294,12 @@ const Header = () => {
                         alt="Eclipse 216"
                       />
                     ),
-                    link: "/eclipse21",
+                    link: "/eclipse21couplesxptech",
                     text: "ECLIPSE - 21`6FT",
                     price: "$92,900",
                   },
                   {
-                    link: "/eclipse22",
+                    link: "/eclipse22couplesxptech",
                     text: "ECLIPSE - 22FT",
                     price: "$98,900",
                   },

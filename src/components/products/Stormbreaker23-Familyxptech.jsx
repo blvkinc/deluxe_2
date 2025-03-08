@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import "./Products.css";
 import "../home/Home.css";
 import "../home/homecomponents/HomeComponent.css";
-import Strom23inside from "../products/SlideShows/Stormbreaker23inside";
+import Strom23inside from "./SlideShows/Stormbreaker23inside";
 import { gsap } from "gsap";
 import GoToTop from "../functions/GoToTop";
 import Storm23specs from "./Specsmenu/Specs23";
@@ -23,7 +23,7 @@ const scrollToLayout = () => {
   }
 };
 
-const Stormbreaker23 = () => {
+const Stormbreaker23FamilyXPTech = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -149,4 +149,4 @@ const Stormbreaker23 = () => {
   );
 };
 
-export default React.memo(Stormbreaker23);
+export default React.memo(Stormbreaker23FamilyXPTech);

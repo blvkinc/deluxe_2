@@ -10,14 +10,14 @@ const products = [
     name: "ECLIPSE - 21`6FT",
     price: "$92,900",
     image: "https://deluxcaravan.b-cdn.net/assets/header/216.webp",
-    link: "/eclipse21",
+    link: "/eclipse21couplesoffroad",
   },
   {
     id: 2,
     name: "ECLIPSE - 22FT",
     price: "$98,900",
     image: "",
-    link: "/eclipse22",
+    link: "/eclipse22couplesoffroad",
   },
 ];
 

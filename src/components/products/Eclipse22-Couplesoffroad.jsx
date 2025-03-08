@@ -2,11 +2,11 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import "./Products.css";
 import "../home/Home.css";
 import "../home/homecomponents/HomeComponent.css";
-import Strom21inside from "../products/SlideShows/Stormbreaker21inside";
+import Eclipse22gallery from "../products/SlideShows/Eclipse22gallery";
 import { gsap } from "gsap";
 import GoToTop from "../functions/GoToTop";
-import Storm21specs from "./Specsmenu/Specs21";
-import Techspec21 from "./techspecs/Techspec21";
+import SpecsEclipse22 from "./Specsmenu/SpecsEclipse22";
+import TechspecEclipse22 from "./techspecs/TechspecEclipse22";
 import WarrantyPolicyPopup from "./popup/WarrantyPolicyPopUp";
 
 const scrollToSpecs = () => {
@@ -23,7 +23,7 @@ const scrollToLayout = () => {
   }
 };
 
-const Stormbreaker21 = () => {
+const Eclipse22CouplesOffRoad = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -61,10 +61,13 @@ const Stormbreaker21 = () => {
     <div className="container">
       <div className="component">
         <div className="background-image">
-          <img src="https://deluxcaravan.b-cdn.net/assets/Product%20renders/SB216Exterior.webp" alt="" />
+          <img
+            src="https://deluxcaravan.b-cdn.net/assets/E22/eclipse22_ex_6-min.webp"
+            alt=""
+          />
           <div className="image-overlay">
             <div className="button-container">
-              <h1 className="Product-header revealUp">Stormbreaker21`6</h1>
+              <h1 className="Product-header revealUp">Eclipse 22`</h1>
               <button
                 onClick={scrollToLayout}
                 className="btn hover-border-1 revealUp"
@@ -83,79 +86,67 @@ const Stormbreaker21 = () => {
       </div>
 
       <div className="slideshowcomopnent">
-        <Strom21inside />
+        <Eclipse22gallery />
       </div>
       {/* <div className='slideshowcomopnent'>
     </div> */}
       <div className="component">
-        <div className="product-container" id="layout">
+        <div
+          className="product-container"
+          id="layout"
+          style={{
+            gridGap: "100px",
+          }}
+        >
           <div className="description">
             <p>
-              Are you on the hunt for a more spacious family bunk caravan? Your
-              search ends here with the Stormbreaker 21'6, the solution you've
-              been seeking. This model offers all the remarkable features found
-              in the 19'6. Every journey transforms into an unforgettable
-              experience, thanks to its premium built interior, exterior, and
-              mechanical features. when you embark on the open road with your
-              loved ones, you'll be treated to an exceptionally roomy layout,
-              complete with all the amenities you'd expect from a luxury RV
-              adventure. But our commitment doesn't end there- we ensure your
-              adventures leave no environmental footprint. With eco-friendly
-              features, you can travel without guilt and experience all the joy
-              you deserve.
-            </p>
-            <div className="package-details">
-            <p>
-                <h2>NOW WITH ALL 2025 ORDERS, OFF-GRID PACKAGE INCLUSIONS: </h2>
-              </p>
-              <p>
-              <h3>WORTH $5000 !</h3>
-              </p>
-              <ul>
-  <li>DOMETIC FRESH JET AIRCON</li>
-  <li>188L DOMETIC COMPRESSOR FRIDGE</li>
-  <li>3 X 170W SOLAR PANELS</li>
-  <li>2 X 100AH LITHIUM BATTERIES</li>
-</ul>
-
-            </div>
-            <p>
-              <button className="virtual-btn">
-                <a href="/tour">Have a look at STORMBREAKER 21`6</a>
-              </button>
+              Introducing our biggest ans most spacious 2 Berth Caravan.An
+              impressive feature is the seperate main bed and the rear lounge
+              area that extends the width of the caravan. Ideal for a couple who
+              like to enjoy time with fellow caravaners or just like the extra
+              space. This model is equppied with the same luxuries of the other
+              models with even more storage. Built with premium interior,
+              exterior, and mechanical features when you embark on the open
+              road. Trust us, you'll be treated to an exceptionally roomy
+              layout, complete with all the amenities you'd expect
+              from a luxury RV.
             </p>
             {/* <button
               className="btn hover-border-1 revealUp"
               onClick={openWarrantyPopupWarrantyPolicy}
             >
-               Download Our Brochure and Upgrade List
+              Download Our Brochure and Upgrade List
             </button>
             {isWarrantyPopupOpen && (
               <WarrantyPolicyPopup onClose={closeWarrantyPopupWarrantyPolicy} />
             )} */}
           </div>
-          <div className="image">
-            <iframe
-              src="https://esceneyf.sirv.com/Spins/test2/test2.spin"
-              title="Stormbreaker21"
-              width="1000px"
-              height="1000px"
-              frameborder="0"
-              allowFullScreen
-            ></iframe>{" "}
+          <div className="package-details">
+            <p>
+              <h2>NOW WITH ALL 2025 ORDERS, OFF-GRID PACKAGE INCLUSIONS: </h2>
+            </p>
+            <p>
+              <h3>WORTH $5000 !</h3>
+            </p>
+            <ul>
+              <li>DOMETIC FRESH JET AIRCON</li>
+              <li>188L DOMETIC COMPRESSOR FRIDGE</li>
+              <li>3 X 170W SOLAR PANELS</li>
+              <li>2 X 100AH LITHIUM BATTERIES</li>
+            </ul>
           </div>
         </div>
       </div>
       <div className="component" id="specs">
-        <Techspec21 />
+        <TechspecEclipse22 />
       </div>
       <div className="component" id="specs">
         <h1>Specs Menu</h1>
-        <Storm21specs />
+        <SpecsEclipse22 />
       </div>
-      <GoToTop/>
+      <GoToTop />
     </div>
-   );
-  };
-  
-  export default React.memo(Stormbreaker21);
+  );
+};
+
+export default React.memo(Eclipse22CouplesOffRoad);

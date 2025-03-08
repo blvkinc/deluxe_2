@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import "./Products.css";
 import "../home/Home.css";
 import "../home/homecomponents/HomeComponent.css";
-import Riptide22inside from "../products/SlideShows/Riptide22gallery";
+import Riptide22inside from "./SlideShows/Riptide22gallery";
 import { gsap } from "gsap";
 import GoToTop from "../functions/GoToTop";
 import Rip22specs from "./Specsmenu/SpecsRiptide22";
@@ -23,7 +23,7 @@ const scrollToLayout = () => {
   }
 };
 
-const Stormbreaker21 = () => {
+const Riptide22FamilyOffRoad = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -61,7 +61,10 @@ const Stormbreaker21 = () => {
     <div className="container">
       <div className="component">
         <div className="background-image">
-          <img src="https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp" alt="" />
+          <img
+            src="https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp"
+            alt=""
+          />
           <div className="image-overlay">
             <div className="button-container">
               <h1 className="Product-header revealUp">RIPTIDE 22`</h1>
@@ -97,7 +100,19 @@ const Stormbreaker21 = () => {
         >
           <div className="description">
             <p>
-            Are you on the hunt for a more spacious family bunk caravan? Your search ends here with the Riptide 22``, the solution you've been seeking. This model offers all the remarkable features found in  our Stormbreaker range. Every journey transforms into an unforgettable experience, thanks to its premium built interior, exterior, and mechanical features. when you embark on the open road with your loved ones, you'll be treated to an exceptionally roomy layout, complete with all the amenities you'd expect from a luxury RV adventure. But our commitment doesn't end there- we ensure your adventures leave no environmental footprint. With eco-friendly features, you can travel without guilt and experience all the joy you deserve.</p>
+              Are you on the hunt for a more spacious family bunk caravan? Your
+              search ends here with the Riptide 22``, the solution you've been
+              seeking. This model offers all the remarkable features found in
+              our Stormbreaker range. Every journey transforms into an
+              unforgettable experience, thanks to its premium built interior,
+              exterior, and mechanical features. when you embark on the open
+              road with your loved ones, you'll be treated to an exceptionally
+              roomy layout, complete with all the amenities you'd expect from a
+              luxury RV adventure. But our commitment doesn't end there- we
+              ensure your adventures leave no environmental footprint. With
+              eco-friendly features, you can travel without guilt and experience
+              all the joy you deserve.
+            </p>
             <p>
               <button className="virtual-btn">
                 <a href="/tour">Have a look at RIPTIDE 22`</a>
@@ -136,9 +151,9 @@ const Stormbreaker21 = () => {
         <h1>Specs Menu</h1>
         <Rip22specs />
       </div>
-      <GoToTop/>
+      <GoToTop />
     </div>
-   );
-  };
-  
-  export default React.memo(Stormbreaker21);
+  );
+};
+
+export default React.memo(Riptide22FamilyOffRoad);

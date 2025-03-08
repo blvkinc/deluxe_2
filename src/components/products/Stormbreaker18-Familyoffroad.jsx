@@ -3,7 +3,7 @@ import "./Products.css";
 import "../home/Home.css";
 import "../home/homecomponents/HomeComponent.css";
 import GoToTop from "../functions/GoToTop";
-import Strom18inside from "../products/SlideShows/Stormbreaker18inside";
+import Strom18inside from "./SlideShows/Stormbreaker18inside";
 import { gsap } from "gsap";
 import Storm18specs from "./Specsmenu/Specs18";
 import Techspec18 from "./techspecs/Techspec18";
@@ -24,7 +24,7 @@ const scrollToLayout = () => {
   }
 };
 
-const Stormbreaker18 = () => {
+const Stormbreaker18FamilyOffRoad = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -62,7 +62,10 @@ const Stormbreaker18 = () => {
     <div className="container">
       <div className="component">
         <div className="background-image">
-          <img src="https://deluxcaravan.b-cdn.net/assets/Product%20renders/SB186Exterior.webp"alt="" />
+          <img
+            src="https://deluxcaravan.b-cdn.net/assets/Product%20renders/SB186Exterior.webp"
+            alt=""
+          />
           <div className="image-overlay">
             <div className="button-container">
               <h1 className="Product-header revealUp">Stormbreaker18`6</h1>
@@ -114,12 +117,11 @@ const Stormbreaker18 = () => {
                 <h3>WORTH $5000 !</h3>
               </p>
               <ul>
-  <li>DOMETIC FRESH JET AIRCON</li>
-  <li>188L DOMETIC COMPRESSOR FRIDGE</li>
-  <li>3 X 170W SOLAR PANELS</li>
-  <li>2 X 100AH LITHIUM BATTERIES</li>
-</ul>
-
+                <li>DOMETIC FRESH JET AIRCON</li>
+                <li>188L DOMETIC COMPRESSOR FRIDGE</li>
+                <li>3 X 170W SOLAR PANELS</li>
+                <li>2 X 100AH LITHIUM BATTERIES</li>
+              </ul>
             </div>
             <p>
               <button className="virtual-btn">
@@ -135,8 +137,6 @@ const Stormbreaker18 = () => {
             {isWarrantyPopupOpen && (
               <WarrantyPolicyPopup onClose={closeWarrantyPopupWarrantyPolicy} />
             )} */}
-
-       
           </div>
           <div className="image">
             <iframe
@@ -157,9 +157,9 @@ const Stormbreaker18 = () => {
         <h1>Specs Menu</h1>
         <Storm18specs />
       </div>
-      <GoToTop/>
+      <GoToTop />
     </div>
   );
 };
 
-export default React.memo(Stormbreaker18);
+export default React.memo(Stormbreaker18FamilyOffRoad);
