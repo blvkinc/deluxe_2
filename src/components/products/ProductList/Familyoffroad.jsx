@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Productlist.css";
-import "../../home/Home.css";
-import "../../home/homecomponents/HomeComponent.css";
 
 const productstormbreaker = [
   {
@@ -48,8 +46,8 @@ const productriptide = [
 
 const Familyoffroad = React.memo(() => {
   return (
-    <div className="container">
-      <div className="component">
+    <div className="productgrid-container">
+      <div className="productgrid-component">
         <h1 className="product-grid-heading">FAMILY OFF-ROAD</h1>
         <h2 className="product-grid-subheading">STORMBREAKER</h2>
         <div className="product-grid">
@@ -68,7 +66,7 @@ const Familyoffroad = React.memo(() => {
           ))}
         </div>
       </div>
-      <div className="component">
+      <div className="productgrid-component">
         <h2 className="product-grid-subheading">RIPTIDE</h2>
         <div className="product-grid">
           {productriptide.map((productriptide) => (

@@ -23,8 +23,8 @@ const products = [
 
 const Couplesoffroad = React.memo(() => {
   return (
-    <div className="container">
-      <div className="component">
+    <div className="productgrid-container">
+      <div className="productgrid-component">
         <h1 className="product-grid-heading">COUPLES OFF-ROAD</h1>
         <h2 className="product-grid-subheading">Eclipse</h2>
         <div className="product-grid">

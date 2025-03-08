@@ -48,8 +48,8 @@ const productriptide = [
 
 const Familyxptech = React.memo(() => {
   return (
-    <div className="container">
-      <div className="component">
+    <div className="productgrid-container">
+      <div className="productgrid-component">
         <h1 className="product-grid-heading">FAMILY XP TECH</h1>
         <h2 className="product-grid-subheading">STORMBREAKER</h2>
         <div className="product-grid">
@@ -68,7 +68,7 @@ const Familyxptech = React.memo(() => {
           ))}
         </div>
       </div>
-      <div className="component">
+      <div className="productgrid-component">
         <h2 className="product-grid-subheading">RIPTIDE</h2>
         <div className="product-grid">
           {productriptide.map((productriptide) => (
