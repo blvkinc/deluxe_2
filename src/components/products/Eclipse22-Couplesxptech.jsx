@@ -8,6 +8,7 @@ import GoToTop from "../functions/GoToTop";
 import SpecsEclipse22 from "./Specsmenu/SpecsEclipse22";
 import TechspecEclipse22 from "./techspecs/TechspecEclipse22";
 import WarrantyPolicyPopup from "./popup/WarrantyPolicyPopUp";
+import { Link } from "react-router-dom";
 
 const scrollToSpecs = () => {
   const specsDiv = document.getElementById("specs");
@@ -145,7 +146,13 @@ const Eclipse22CouplesXPTech = () => {
         <SpecsEclipse22 />
       </div>
       <div className="component" id="xptechbanner">
-        <h1>XP Tech Banner goes here</h1>
+        <Link to="/xptec">
+          <img 
+            src="https://deluxcaravan.b-cdn.net/assets/xp%20tec/Find%20out%20More%20About%20Xp%20tec.png" 
+            alt="XP Tech Banner" 
+            className="xptech-banner"
+          />
+        </Link>
       </div>
       <GoToTop />
     </div>

@@ -9,6 +9,7 @@ import Storm18specs from "./Specsmenu/Specs18";
 import Techspec18 from "./techspecs/Techspec18";
 import WarrantyPolicyPopup from "./popup/WarrantyPolicyPopUp";
 import LayoutPopUp from "./popup/LayoutPopUp";
+import { Link } from "react-router-dom";
 
 const scrollToSpecs = () => {
   const specsDiv = document.getElementById("specs");
@@ -156,9 +157,6 @@ const Stormbreaker18FamilyOffRoad = () => {
       <div className="component" id="specs">
         <h1>Specs Menu</h1>
         <Storm18specs />
-      </div>
-      <div className="component" id="xptechbanner">
-        <h1>XP Tech Banner goes here</h1>
       </div>
       <GoToTop />
     </div>

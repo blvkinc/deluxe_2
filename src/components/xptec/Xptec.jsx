@@ -8,6 +8,10 @@ const WarrantyPolicy = React.memo(() => {
     <div className="warrantycontainer">
       <h1>XP TECH</h1>
       <h2>Innovative • Timeless • Tough</h2>
+      <img
+        src="https://deluxcaravan.b-cdn.net/assets/xp%20tec/image1.png"
+        alt="xptec"
+      />
       <div className="warrantycomponent">
         <img alt="cfrtskin" />
         <h2>What is CFRT Skin?</h2>
@@ -20,7 +24,10 @@ const WarrantyPolicy = React.memo(() => {
       </div>
       <div className="warrantycomponent">
         <h2>The Main Advantages of CFRT Skin</h2>
-        <img alt="cfrtskin" />
+        <img
+        src="https://deluxcaravan.b-cdn.net/assets/xp%20tec/image3.png"
+        alt="xptec"
+      />
         <p>&#x2714; Light Weight:</p>
         <p>&#x2714; High Strength: </p>
         <p>&#x2714; Anti-corrosion:</p>
@@ -28,8 +35,12 @@ const WarrantyPolicy = React.memo(() => {
         <p>&#x2714; Thermal Insulation:</p>
       </div>
       <div className="warrantycomponent">
-        <img alt="xpsform" />
+        
         <h2>XPS Foam</h2>
+        <img
+        src="https://deluxcaravan.b-cdn.net/assets/xp%20tec/image2.png"
+        alt="xptec"
+      />
         <p>
           "XPS (extruded polystyrene) is produced using polystyrene resin
           combined with auxiliary materials and polymers. Through a heating,

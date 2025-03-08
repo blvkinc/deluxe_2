@@ -186,3 +186,49 @@
     text-align: left;
   }
 }
+
+.xptech-banner {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.xptech-banner:hover {
+  transform: scale(1.02);
+}
+
+#xptechbanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .xptech-banner {
+    max-width: 200px;
+    margin: 8px auto;
+  }
+  
+  #xptechbanner {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .xptech-banner {
+    max-width: 150px;
+    margin: 6px auto;
+  }
+  
+  #xptechbanner {
+    padding: 6px;
+  }
+}

@@ -8,6 +8,7 @@ import GoToTop from "../functions/GoToTop";
 import Storm23specs from "./Specsmenu/Specs23";
 import Techspec23 from "./techspecs/Techspec23";
 import WarrantyPolicyPopup from "./popup/WarrantyPolicyPopUp";
+import { Link } from "react-router-dom";
 
 const scrollToSpecs = () => {
   const specsDiv = document.getElementById("specs");
@@ -145,7 +146,13 @@ const Stormbreaker23FamilyXPTech = () => {
         <Storm23specs />
       </div>
       <div className="component" id="xptechbanner">
-        <h1>XP Tech Banner goes here</h1>
+        <Link to="/xptec">
+          <img 
+            src="https://deluxcaravan.b-cdn.net/assets/xp%20tec/Find%20out%20More%20About%20Xp%20tec.png" 
+            alt="XP Tech Banner" 
+            className="xptech-banner"
+          />
+        </Link>
       </div>
       <GoToTop />
     </div>

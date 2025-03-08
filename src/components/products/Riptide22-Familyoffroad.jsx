@@ -8,6 +8,7 @@ import GoToTop from "../functions/GoToTop";
 import Rip22specs from "./Specsmenu/SpecsRiptide22";
 import TechspecRiptide22 from "./techspecs/TechspecRiptide22";
 import WarrantyPolicyPopup from "./popup/WarrantyPolicyPopUp";
+import { Link } from "react-router-dom";
 
 const scrollToSpecs = () => {
   const specsDiv = document.getElementById("specs");
@@ -150,9 +151,6 @@ const Riptide22FamilyOffRoad = () => {
       <div className="component" id="specs">
         <h1>Specs Menu</h1>
         <Rip22specs />
-      </div>
-      <div className="component" id="xptechbanner">
-        <h1>XP Tech Banner goes here</h1>
       </div>
       <GoToTop />
     </div>

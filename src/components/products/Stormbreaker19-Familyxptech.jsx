@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import Storm19specs from "./Specsmenu/Specs19";
 import Techspec19 from "./techspecs/Techspec19";
 import WarrantyPolicyPopup from "./popup/WarrantyPolicyPopUp";
+import { Link } from "react-router-dom";
 
 const scrollToSpecs = () => {
   const specsDiv = document.getElementById("specs");
@@ -154,7 +155,13 @@ const Stormbreaker19FamilyXPTech = () => {
         <Storm19specs />
       </div>
       <div className="component" id="xptechbanner">
-        <h1>XP Tech Banner goes here</h1>
+        <Link to="/xptec">
+          <img 
+            src="https://deluxcaravan.b-cdn.net/assets/xp%20tec/Find%20out%20More%20About%20Xp%20tec.png" 
+            alt="XP Tech Banner" 
+            className="xptech-banner"
+          />
+        </Link>
       </div>
       <GoToTop />
     </div>
