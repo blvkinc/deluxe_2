@@ -631,7 +631,7 @@ const Header = () => {
                 </motion.li>
               ))}
               <li className="menu-item">
-                <Link to="/tour">
+                <Link to="/Xptec">
                   <button>XP-TECH</button>
                 </Link>
               </li>
