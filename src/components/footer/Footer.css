@@ -9,7 +9,6 @@
   text-align: left; /* Align the text to the left */
   margin-top: 10vh;
   margin-bottom: 10vh;
-  scroll-snap-align: none;
 }
 
 /* Logo */
@@ -153,12 +152,5 @@
   }
   .social-links a {
     padding-inline: 10px;
-  }
-}
-
-/* Desktop and larger screens only */
-@media (min-width: 1024px) {
-  .footer {
-    /* scroll-snap-align: start !important; */
   }
 }

@@ -32,10 +32,6 @@
   text-align: left;
 }
 
-.slideshowcomopnent {
-  scroll-snap-align: none;
-}
-
 .description {
   width: 40vw; /* Adjust the width as needed */
   margin-left: 100px;
@@ -129,13 +125,6 @@
   box-shadow: 0 0 35px 7px rgba(255, 255, 255, 0.5);
   padding: 20px;
   border-radius: 20px;
-}
-
-/* Desktop and larger screens only */
-@media (min-width: 1024px) {
-  .slideshowcomponent {
-    scroll-snap-align: start !important;
-  }
 }
 
 /* Media query for smaller screens */
