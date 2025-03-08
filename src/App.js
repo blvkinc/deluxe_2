@@ -4,7 +4,6 @@ import "./App.css";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Footer from "./components/footer/Footer";
-import Riptide22Familyxptech from "./components/products/Riptide22-Familyxptech";
 
 const About = lazy(() => import("./components/about/About"));
 const Blog = lazy(() => import("./components/blog/Blog"));
