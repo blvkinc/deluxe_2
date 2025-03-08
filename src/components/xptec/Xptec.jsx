@@ -8,12 +8,12 @@ const WarrantyPolicy = React.memo(() => {
     <div className="warrantycontainer">
       <h1>XP TECH</h1>
       <h2>Innovative • Timeless • Tough</h2>
+     
+      <div className="warrantycomponent">
       <img
         src="https://deluxcaravan.b-cdn.net/assets/xp%20tec/image1.png"
         alt="xptec"
       />
-      <div className="warrantycomponent">
-        <img alt="cfrtskin" />
         <h2>What is CFRT Skin?</h2>
         <p>
           CFRT skins use the latest thermoplastic properties, laminated by
