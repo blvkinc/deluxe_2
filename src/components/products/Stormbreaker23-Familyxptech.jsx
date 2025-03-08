@@ -144,6 +144,9 @@ const Stormbreaker23FamilyXPTech = () => {
         <h1>Specs Menu</h1>
         <Storm23specs />
       </div>
+      <div className="component" id="xptechbanner">
+        <h1>XP Tech Banner goes here</h1>
+      </div>
       <GoToTop />
     </div>
   );

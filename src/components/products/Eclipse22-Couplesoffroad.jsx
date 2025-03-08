@@ -144,6 +144,9 @@ const Eclipse22CouplesOffRoad = () => {
         <h1>Specs Menu</h1>
         <SpecsEclipse22 />
       </div>
+      <div className="component" id="xptechbanner">
+        <h1>XP Tech Banner goes here</h1>
+      </div>
       <GoToTop />
     </div>
   );

@@ -155,6 +155,9 @@ const Stormbreaker21FamilyOffRoad = () => {
         <h1>Specs Menu</h1>
         <Storm21specs />
       </div>
+      <div className="component" id="xptechbanner">
+        <h1>XP Tech Banner goes here</h1>
+      </div>
       <GoToTop />
     </div>
   );
