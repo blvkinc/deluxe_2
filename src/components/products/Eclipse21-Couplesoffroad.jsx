@@ -100,14 +100,14 @@ const Eclipse21CouplesOffRoad = () => {
         >
           <div className="description">
             <p>
-              Introducing our first 2 Berth Caravan and we can tell you it’s a
+              Introducing our first 2 Berth Caravan and we can tell you it's a
               special one. The most notable feature is the massive rear ensuite.
               Ideal for a couple who loves to travel for extended periods of
               time. Then again this an ideal setup for anyone who likes life on
               the road.Built with premium interior, exterior, and mechanical
               features when you embark on the open road with your loved ones,
-              you&#39;ll be treated to an exceptionally roomy layout, complete
-              with all the amenities you&#39;d expect from a luxury RV.
+              you'll be treated to an exceptionally roomy layout, complete
+              with all the amenities you'd expect from a luxury RV.
             </p>
             {/* <button
               className="btn hover-border-1 revealUp"
@@ -141,9 +141,6 @@ const Eclipse21CouplesOffRoad = () => {
       <div className="component" id="specs">
         <h1>Specs Menu</h1>
         <SpecsEclipse21 />
-      </div>
-      <div className="component" id="xptechbanner">
-        <h1>XP Tech Banner goes here</h1>
       </div>
       <GoToTop />
     </div>

@@ -271,6 +271,9 @@ const Navbar = () => {
                               <a href="/warranty">WARRANTY POLICY</a>
                             </li>
                             <li>
+                              <a href="/maintenance">SERVICE & MAINTENANCE</a>
+                            </li>
+                            <li>
                               <a href="/tour">VIRTUAL TOURS</a>
                             </li>
                           </ul>
@@ -280,7 +283,7 @@ const Navbar = () => {
                   </li>
                   <li className="nav-item" onClick={toggleMenu}>
                     <p className="social">
-                      <Link to="/tour" className="nav-link">
+                      <Link to="/Xptec" className="nav-link">
                         XP-TECH
                       </Link>
                     </p>

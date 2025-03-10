@@ -29,6 +29,19 @@ function VideoLanding() {
 
   useEffect(() => {
     revealUpAnimation();
+    
+    // Add slide-in animation for Australian Made banner
+    gsap.fromTo(
+      ".australian-made-banner",
+      { x: -100, opacity: 0 },
+      {
+        duration: 1,
+        x: 0,
+        opacity: 1,
+        ease: "power2.out",
+        delay: 0.5
+      }
+    );
   }, [revealUpAnimation]);
 
   return (
@@ -51,6 +64,9 @@ function VideoLanding() {
           </video>
         </div>
         <div className="text-overlay">
+          <div className="australian-made-banner">
+            <span>AUSTRALIAN MADE</span>
+          </div>
           <h1 className="revealUp">DELUXE CARAVANS</h1>
           <div className="link-overlay revealUp">
             <Link to="/blog" className="btn hover-border-1">

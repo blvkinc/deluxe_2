@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import Storm19specs from "./Specsmenu/Specs19";
 import Techspec19 from "./techspecs/Techspec19";
 import WarrantyPolicyPopup from "./popup/WarrantyPolicyPopUp";
+import { Link } from "react-router-dom";
 
 const scrollToSpecs = () => {
   const specsDiv = document.getElementById("specs");
@@ -152,9 +153,6 @@ const Stormbreaker19FamilyOffRoad = () => {
       <div className="component" id="specs">
         <h1>Specs Menu</h1>
         <Storm19specs />
-      </div>
-      <div className="component" id="xptechbanner">
-        <h1>XP Tech Banner goes here</h1>
       </div>
       <GoToTop />
     </div>

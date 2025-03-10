@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer";
 const About = lazy(() => import("./components/about/About"));
 const Blog = lazy(() => import("./components/blog/Blog"));
 const Video = lazy(() => import("./components/video/Video"));
+const Maintenance = lazy(() => import("./components/maintenance/Maintenance"));
 const Eclipse21CouplesOffRoad = lazy(() =>
   import("./components/products/Eclipse21-Couplesoffroad")
 );
@@ -101,6 +102,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/video" element={<Video />} />
+            <Route path="/maintenance" element={<Maintenance />} />
             <Route
               path="/eclipse21couplesoffroad"
               element={<Eclipse21CouplesOffRoad />}

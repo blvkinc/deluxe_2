@@ -266,6 +266,14 @@
   .es-review-content-text {
     font-size: 10px !important;
   }
+  .australian-made-banner {
+    left: 10px;
+    padding: 6px 12px;
+  }
+  
+  .australian-made-banner span {
+    font-size: 12px;
+  }
 }
 
 /* gallery */
@@ -720,5 +728,57 @@
 
   .swiper-container {
     height: auto;
+  }
+}
+
+.australian-made-banner {
+  position: absolute;
+  left: 20px;
+  top: 30%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.australian-made-banner span {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: 1px;
+  display: block;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .australian-made-banner {
+    left: 10px;
+    top: 20%;
+    padding: 6px 12px;
+    transform: translateY(0);
+    z-index: 1000;
+  }
+  
+  .australian-made-banner span {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .australian-made-banner {
+    left: 5px;
+    top: 15%;
+    padding: 4px 8px;
+    z-index: 1000;
+  }
+  
+  .australian-made-banner span {
+    font-size: 14px;
+    letter-spacing: 0.3px;
   }
 }

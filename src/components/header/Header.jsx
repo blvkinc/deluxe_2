@@ -309,6 +309,7 @@ const Header = () => {
           { label: "UPDATES", link: "/blog" },
           { label: "VIDEOS", link: "/video" },
           { label: "WARRANTY POLICY", link: "/warranty" },
+          { label: "SERVICE & MAINTENANCE", link: "/maintenance" },
           { label: "VIRTUAL TOURS", link: "/tour" },
         ],
       },
