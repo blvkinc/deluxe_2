@@ -218,6 +218,41 @@ h5 {
   height: 27px;
 }
 
+/* Custom header styles for Maintenance and Warranty pages */
+.custom-header {
+  color: black !important;
+}
+
+.custom-header .menu-item button {
+  color: black !important;
+}
+
+.custom-header:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+.custom-header:hover .menu-item button {
+  color: white !important;
+}
+
+.custom-header .sub-menu,
+.custom-header .nested-submenu,
+.custom-header .deep-nested-submenu {
+  background-color: black !important;
+  color: white !important;
+}
+
+.custom-header .sub-menu-item,
+.custom-header .nested-submenu-item,
+.custom-header .deep-nested-submenu-item {
+  color: white !important;
+}
+
+.custom-header .iconh {
+  filter: brightness(0) invert(1); /* Convert icons to white */
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .header {

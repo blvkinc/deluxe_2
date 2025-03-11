@@ -1,43 +1,105 @@
-/* WarrantyPolicy container styles */
-.warrantycontainer {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10vh;
+.maintenance-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 
-/* WarrantyPolicy component styles */
-.warrantycomponent {
-  display: grid;
-  grid-template-columns: 1fr; /* Display components in a single column */
-  gap: 20px; /* Add spacing between components */
-  padding: 20px; /* Optional: Add padding to the components */
-  min-height: 50px; /* Increase the minimum height to create more spacing */
-  height: auto; /* Remove fixed height to allow components to expand as needed */
+.maintenance-content {
+  padding: 40px;
+}
+
+.maintenance-content h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.maintenance-section {
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.service-type {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.service-type:last-child {
+  margin-bottom: 0;
+}
+
+.service-type h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.service-note {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.service-type ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.service-type ul li {
+  margin-bottom: 12px;
+  position: relative;
+  line-height: 1.6;
+  font-size: 1.1rem;
   text-align: left;
-  padding-left: 10vw;
-  padding-right: 10vw;
 }
 
-/* Style heading and paragraph elements within the components */
-.warrantycomponent h2 {
-  margin-top: 10vh;
-  font-size: 1.5rem; /* Increase the font size for headings */
-  margin-bottom: 10px; /* Add space below headings */
+.service-type ul li:before {
+  content: "•";
+  color: #000;
+  font-weight: bold;
+  position: absolute;
+  left: -20px;
 }
 
-.warrantycomponent p {
-  font-size: 1rem; /* Set a standard font size for paragraphs */
-  margin-bottom: 10px; /* Add space below paragraphs */
+@media (max-width: 768px) {
+  .maintenance-container {
+    padding: 20px 10px;
+  }
+
+  .maintenance-section {
+    padding: 0;
+  }
+
+  .maintenance-content {
+    padding-top: 10%;
+  }
+
+  .maintenance-content h1 {
+    font-size: 2rem;
+  }
+
+  .service-type {
+    padding: 0px;
+  }
 }
 
-/* Style unordered lists within the components */
-.warrantycomponent ul {
-  list-style-type: disc; /* Use disc bullets for lists */
-  padding-left: 20px; /* Add left padding to lists for indentation */
-}
+@media (max-width: 480px) {
+  .maintenance-content h1 {
+    font-size: 1.8rem;
+  }
 
-/* Style list items within unordered lists */
-.warrantycomponent li {
-  font-size: 1rem; /* Set a font size for list items */
-  margin-bottom: 5px; /* Add space between list items */
+  .service-type h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-type {
+    padding: 0px;
+  }
+
+  .service-type ul li {
+    font-size: 0.7rem;
+  }
 }

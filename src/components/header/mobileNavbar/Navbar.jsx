@@ -1,9 +1,13 @@
 import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
+  const location = useLocation(); // Get the current route
+  const isCustomPage =
+    location.pathname === "/maintenance" || location.pathname === "/warranty";
+
   const [isOpen, setIsOpen] = useState(false);
   const navbarRef = useRef();
 
@@ -80,9 +84,16 @@ const Navbar = () => {
 
   return (
     <div className="dropdown-menu">
-      <button onClick={toggleMenu} className="open-button">
-        Menu
-      </button>
+      {!isOpen && (
+        <button
+          onClick={toggleMenu}
+          className={`open-button ${isCustomPage ? "custom-page" : ""}
+          }`}
+        >
+          Menu
+        </button>
+      )}
+
       <AnimatePresence>
         {isOpen && (
           <>

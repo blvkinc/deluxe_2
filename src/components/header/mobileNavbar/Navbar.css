@@ -15,7 +15,6 @@
 .dropdown-menu li {
   position: relative;
   margin-top: 10px;
-  margin-bottom: 30px;
   text-align: center;
   padding: 10px;
 }
@@ -91,9 +90,7 @@
   align-items: center;
   z-index: 1000;
   transform: translateX(-100%);
-  transition:
-    opacity 0.1s ease,
-    transform 0.1s ease;
+  transition: opacity 0.1s ease, transform 0.1s ease;
 }
 
 .social-media-container.show {
@@ -181,4 +178,20 @@ ul.submenu-list {
   margin: 0;
   font-size: 12px;
   color: black;
+}
+
+/* Custom styles for Maintenance and Warranty pages */
+.custom-page {
+  color: black !important;
+}
+
+.custom-page .dropdown-menu .open-button,
+.close-button {
+  color: white;
+  font-size: larger;
+  position: absolute;
+  background-color: white;
+  border-color: transparent;
+  top: 30px;
+  right: 30px;
 }
