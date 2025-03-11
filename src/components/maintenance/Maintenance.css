@@ -2,19 +2,14 @@
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #000;
   min-height: 100vh;
 }
 
 .maintenance-content {
-  background-color: #000;
   padding: 40px;
-  border-radius: 10px;
-  color: #fff;
 }
 
 .maintenance-content h1 {
-  color: #fff;
   text-align: center;
   margin-bottom: 40px;
   font-size: 2.5rem;
@@ -28,11 +23,8 @@
 }
 
 .service-type {
-  background-color: #111;
   padding: 30px;
-  border-radius: 8px;
   margin-bottom: 30px;
-  border: 1px solid #333;
 }
 
 .service-type:last-child {
@@ -40,7 +32,6 @@
 }
 
 .service-type h3 {
-  color: #fff;
   margin-bottom: 15px;
   font-size: 1.4rem;
   letter-spacing: 1px;
@@ -48,7 +39,6 @@
 }
 
 .service-note {
-  color: #ccc;
   font-style: italic;
   margin-bottom: 15px;
 }
@@ -62,13 +52,13 @@
   margin-bottom: 12px;
   position: relative;
   line-height: 1.6;
-  color: #fff;
   font-size: 1.1rem;
+  text-align: left;
 }
 
 .service-type ul li:before {
   content: "•";
-  color: #fff;
+  color: #000;
   font-weight: bold;
   position: absolute;
   left: -20px;
@@ -79,8 +69,12 @@
     padding: 20px 10px;
   }
 
+  .maintenance-section {
+    padding: 0;
+  }
+
   .maintenance-content {
-    padding: 20px;
+    padding-top: 10%;
   }
 
   .maintenance-content h1 {
@@ -88,7 +82,7 @@
   }
 
   .service-type {
-    padding: 20px;
+    padding: 0px;
   }
 }
 
@@ -102,10 +96,10 @@
   }
 
   .service-type {
-    padding: 15px;
+    padding: 0px;
   }
 
   .service-type ul li {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
-} 
+}

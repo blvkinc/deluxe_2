@@ -1,11 +1,15 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import _ from "lodash"; // Import lodash for debounce
 import "./Header.css";
 import Navbar from "./mobileNavbar/Navbar";
 
 const Header = () => {
+  const location = useLocation();
+  const isCustomHeaderPage =
+    location.pathname === "/maintenance" || location.pathname === "/warranty";
+
   const [activeMenu, setActiveMenu] = useState(null);
   const [isMobile, setIsMobile] = useState(
     useMemo(() => window.innerWidth <= 768, [])
@@ -408,16 +412,24 @@ const Header = () => {
         <Navbar />
       ) : (
         <motion.header
-          className={`header ${visible ? "" : "hidden"}`}
+          className={`header ${visible ? "" : "hidden"} ${
+            isCustomHeaderPage ? "custom-header" : ""
+          }`} // Add custom-header class for Maintenance and Warranty pages
           initial={{ backgroundColor: "transparent" }}
-          whileHover={{ backgroundColor: "white", color: "black" }}
+          whileHover={{
+            backgroundColor: isCustomHeaderPage ? "black" : "white",
+            color: isCustomHeaderPage ? "white" : "black",
+          }} // Conditional hover styles
           animate={
             activeMenu
-              ? { backgroundColor: "white", color: "black" }
+              ? {
+                  backgroundColor: isCustomHeaderPage ? "black" : "white",
+                  color: isCustomHeaderPage ? "white" : "black",
+                } // Conditional active menu styles
               : { backgroundColor: "transparent" }
           }
           transition={{ duration: 0.5 }}
-          onMouseLeave={handleMenuLeave} // Reset states when leaving the entire header
+          onMouseLeave={handleMenuLeave}
         >
           <div className="header-logo">
             <Link to="/">
