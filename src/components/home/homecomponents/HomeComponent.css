@@ -211,7 +211,7 @@
   }
   .link-overlay {
     bottom: auto;
-    margin-top: 30%;
+    margin-top: 20%;
   }
   .desccomponent {
     min-height: auto;
@@ -266,11 +266,6 @@
   .es-review-content-text {
     font-size: 10px !important;
   }
-  .australian-made-banner {
-    left: 10px;
-    padding: 6px 12px;
-  }
-  
   .australian-made-banner span {
     font-size: 12px;
   }
@@ -614,7 +609,7 @@
 }
 @media screen and (max-width: 480px) {
   .link-overlay {
-    margin-top: 55%;
+    margin-top: 40%;
   }
 
   .carousel-button {
@@ -733,10 +728,10 @@
 
 .australian-made-banner {
   position: absolute;
-  left: 20px;
-  top: 30%;
+  left: 5%;
+  top: 90%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0);
+  background-color: black;
   padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid #ffffff;
@@ -756,13 +751,8 @@
 
 @media screen and (max-width: 768px) {
   .australian-made-banner {
-    left: 10px;
-    top: 20%;
-    padding: 6px 12px;
-    transform: translateY(0);
-    z-index: 1000;
+    top: 100%;
   }
-  
   .australian-made-banner span {
     font-size: 18px;
     letter-spacing: 0.5px;
@@ -770,13 +760,12 @@
 }
 
 @media screen and (max-width: 375px) {
-  .australian-made-banner {
-    left: 5px;
-    top: 15%;
-    padding: 4px 8px;
-    z-index: 1000;
+  .link-overlay {
+    margin-top: 55%;
   }
-  
+  .australian-made-banner {
+    top: 100%;
+  }
   .australian-made-banner span {
     font-size: 14px;
     letter-spacing: 0.3px;
