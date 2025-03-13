@@ -6,7 +6,9 @@ import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
   const location = useLocation(); // Get the current route
   const isCustomPage =
-    location.pathname === "/maintenance" || location.pathname === "/warranty";
+    location.pathname === "/maintenance" ||
+    location.pathname === "/warranty" ||
+    location.pathname === "/Xptec";
 
   const [isOpen, setIsOpen] = useState(false);
   const navbarRef = useRef();

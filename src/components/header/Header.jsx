@@ -8,7 +8,9 @@ import Navbar from "./mobileNavbar/Navbar";
 const Header = () => {
   const location = useLocation();
   const isCustomHeaderPage =
-    location.pathname === "/maintenance" || location.pathname === "/warranty";
+    location.pathname === "/maintenance" ||
+    location.pathname === "/warranty" ||
+    location.pathname === "/Xptec";
 
   const [activeMenu, setActiveMenu] = useState(null);
   const [isMobile, setIsMobile] = useState(
