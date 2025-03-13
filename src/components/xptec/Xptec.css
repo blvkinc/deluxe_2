@@ -2,7 +2,7 @@
 .warrantycontainer {
   display: flex;
   flex-direction: column;
-  margin-top: 10vh;
+  padding-top: 10vh;
 }
 
 .warrantycontainer img {
@@ -65,13 +65,17 @@
   .warrantycontainer img {
     max-width: 100%;
   }
-  
+
   .warrantycomponent img {
     max-width: 100%;
   }
-  
+
   .warrantycomponent {
     padding-left: 5vw;
     padding-right: 5vw;
+  }
+
+  .warrantycontainer h2 {
+    font-size: 1rem;
   }
 }

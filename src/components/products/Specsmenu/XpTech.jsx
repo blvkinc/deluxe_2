@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import "./Specsmenu.css";
+import "./XpTechSpecs.css";
 
 const XpTech = () => {
   const [activeIndex, setActiveIndex] = useState(null);
