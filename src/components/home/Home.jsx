@@ -6,6 +6,7 @@ import Gallery from "./homecomponents/Gallery_landing";
 import Reviews from "./homecomponents/CustomerReviews";
 import Partners from "./homecomponents/Partners";
 import HomeDesc from "./homecomponents/HomeDescription";
+import CarouselSection from "./homecomponents/CarouselSection";
 import Model from "../popup-ad/model";
 import Promovid from "./homecomponents/Promovid"
 
@@ -43,6 +44,9 @@ function Home() {
       </div>
       <div className="videocomponent">
         <Promovid />
+      </div>
+      <div className="component">
+        <CarouselSection />
       </div>
       <div className="component">
         <HomeDesc />
