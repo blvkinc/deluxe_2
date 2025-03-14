@@ -54,31 +54,31 @@ const CarouselSection = () => {
     xptech: [
       {
         name: 'Stormbreaker 18\'6 XP Tech',
-        price: '$89,900',
+        price: '$129,900',
         image: 'https://deluxcaravan.b-cdn.net/assets/header/186.webp',
         link: '/stormbreaker18familyxptech'
       },
       {
         name: 'Stormbreaker 19\'6 XP Tech',
-        price: '$92,900',
+        price: '$132,900',
         image: 'https://deluxcaravan.b-cdn.net/assets/header/196.webp',
         link: '/stormbreaker19familyxptech'
       },
       {
         name: 'Stormbreaker 21\'6 XP Tech',
-        price: '$94,900',
+        price: '$134,900',
         image: 'https://deluxcaravan.b-cdn.net/assets/header/216.webp',
         link: '/stormbreaker21familyxptech'
       },
       {
         name: 'Stormbreaker 23\'11 XP Tech',
-        price: '$96,900',
+        price: '$136,900',
         image: 'https://deluxcaravan.b-cdn.net/assets/header/2311.webp',
         link: '/stormbreaker23familyxptech'
       },
       {
         name: 'Riptide 22 XP Tech',
-        price: '$98,900',
+        price: '$138,900',
         image: 'https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20header-min.webp',
         link: '/riptide22familyxptech'
       },
@@ -96,6 +96,51 @@ const CarouselSection = () => {
       }
     ]
   };
+
+  const xptecCaravans = [
+    {
+      id: "stormbreaker23-familyxptech",
+      name: "Stormbreaker 23 Family XP Tec",
+      image: "https://deluxcaravan.b-cdn.net/assets/stormbreaker23-familyxptech/Stormbreaker23-Familyxptech-1.jpg",
+      price: "$89,990",
+      link: "/products/stormbreaker23-familyxptech",
+    },
+    {
+      id: "stormbreaker21-familyxptech",
+      name: "Stormbreaker 21 Family XP Tec",
+      image: "https://deluxcaravan.b-cdn.net/assets/stormbreaker21-familyxptech/Stormbreaker21-Familyxptech-1.jpg",
+      price: "$79,990",
+      link: "/products/stormbreaker21-familyxptech",
+    },
+    {
+      id: "stormbreaker19-familyxptech",
+      name: "Stormbreaker 19 Family XP Tec",
+      image: "https://deluxcaravan.b-cdn.net/assets/stormbreaker19-familyxptech/Stormbreaker19-Familyxptech-1.jpg",
+      price: "$69,990",
+      link: "/products/stormbreaker19-familyxptech",
+    },
+    {
+      id: "stormbreaker18-familyxptech",
+      name: "Stormbreaker 18 Family XP Tec",
+      image: "https://deluxcaravan.b-cdn.net/assets/stormbreaker18-familyxptech/Stormbreaker18-Familyxptech-1.jpg",
+      price: "$64,990",
+      link: "/products/stormbreaker18-familyxptech",
+    },
+    {
+      id: "eclipse22-couplesxptech",
+      name: "Eclipse 22 Couples XP Tec",
+      image: "https://deluxcaravan.b-cdn.net/assets/eclipse22-couplesxptech/Eclipse22-Couplesxptech-1.jpg",
+      price: "$59,990",
+      link: "/products/eclipse22-couplesxptech",
+    },
+    {
+      id: "eclipse21-couplesxptech",
+      name: "Eclipse 21 Couples XP Tec",
+      image: "https://deluxcaravan.b-cdn.net/assets/eclipse21-couplesxptech/Eclipse21-Couplesxptech-1.jpg",
+      price: "$54,990",
+      link: "/products/eclipse21-couplesxptech",
+    },
+  ];
 
   const nextSlide = () => {
     setCurrentSlide((prev) => 
