@@ -6,16 +6,7 @@ const sections = [
   {
     name: "Exterior",
     images: [
-      "https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp",
+      "https://deluxcaravan.b-cdn.net/assets/E22/1-min.webp","https://deluxcaravan.b-cdn.net/assets/E22/2-min.webp","https://deluxcaravan.b-cdn.net/assets/E22/3-min.webp","https://deluxcaravan.b-cdn.net/assets/E22/4-min.webp","https://deluxcaravan.b-cdn.net/assets/E22/5-min.webp","https://deluxcaravan.b-cdn.net/assets/E22/6-min.webp",,
     ],
     description: "",
   },

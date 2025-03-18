@@ -9,7 +9,29 @@ const WarrantyPolicy = React.memo(() => {
       <div className="warrantycontainer">
         <h1>XP TECH</h1>
         <h2>Innovative • Timeless • Tough</h2>
+        
+        <div className="warrantycomponent" style={{ margin: '40px 0' }}>
+          <h2 style={{ marginBottom: '30px' }}>Welcome to the Future of Caravanning</h2>
+          
+          <p style={{ fontSize: '1.2em', marginBottom: '25px', fontWeight: '500' }}>
+            A revolutionary composite technology elevating your caravanning experience.
+          </p>
+          
+          <div style={{ margin: '30px 0' }}>
+            <p style={{ marginBottom: '20px', lineHeight: '1.6' }}>
+              Our full composite, XP-TECH is the solution you have been looking for to create a lifetime of memories. 
+              Built to withstand the toughest of terrain across Australia with its unique features and upgrades.
+            </p>
+            
+            <p style={{ marginBottom: '20px', lineHeight: '1.6' }}>
+              Our XP-TECH offers a range of solutions that your average caravan meranti and aluminium frame constructions can not offer.
+            </p>
+          </div>
 
+          <p style={{ fontSize: '1.1em', fontWeight: '500', marginTop: '30px', fontStyle: 'italic' }}>
+            Let's look at some of these technical specifications involved in creating this technology.
+          </p>
+        </div>
         <div className="warrantycomponent">
           <img
             src="https://deluxcaravan.b-cdn.net/assets/xp%20tec/image1.png"
