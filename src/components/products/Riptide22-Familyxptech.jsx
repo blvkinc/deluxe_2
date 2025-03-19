@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import "./Products.css";
 import "../home/Home.css";
 import "../home/homecomponents/HomeComponent.css";
-import Riptide22inside from "./SlideShows/Riptide22gallery";
+import Riptide22inside from "./SlideShows/Riptide22inside";
 import { gsap } from "gsap";
 import GoToTop from "../functions/GoToTop";
 import Rip22specs from "./Specsmenu/SpecsRiptide22";

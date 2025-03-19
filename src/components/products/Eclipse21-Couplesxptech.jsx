@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import "./Products.css";
 import "../home/Home.css";
 import "../home/homecomponents/HomeComponent.css";
-import Eclipse21gallery from "../products/SlideShows/Eclipse21gallery";
+import Eclipse21CouplesInside from "../products/SlideShows/Eclipse21CouplesInside";
 import { gsap } from "gsap";
 import GoToTop from "../functions/GoToTop";
 import SpecsEclipse21 from "./Specsmenu/SpecsEclipse21";
@@ -87,7 +87,7 @@ const Eclipse21CouplesXPTech = () => {
       </div>
 
       <div className="slideshowcomopnent">
-        <Eclipse21gallery />
+        <Eclipse21CouplesInside />
       </div>
       {/* <div className='slideshowcomopnent'>
     </div> */}

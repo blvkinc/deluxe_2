@@ -152,11 +152,17 @@ const Stormbreaker18FamilyOffRoad = () => {
         </div>
       </div>
       <div className="component" id="specs">
-        <Techspec18 />
-      </div>
-      <div className="component" id="specs">
-        <h1>Specs Menu</h1>
-        <Storm18specs />
+        <div className="specs-section">
+          <h2 className="section-title">Technical Information</h2>
+          <div className="specs-container">
+            <div className="specs-wrapper">
+              <Techspec18 />
+            </div>
+            <div className="specs-wrapper">
+              <Storm18specs />
+            </div>
+          </div>
+        </div>
       </div>
       <GoToTop />
     </div>

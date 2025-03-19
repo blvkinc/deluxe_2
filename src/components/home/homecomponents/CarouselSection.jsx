@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './CarouselSection.css';
 
 const CarouselSection = () => {
   const [activeType, setActiveType] = useState('offroad');
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const caravanData = {
     offroad: [
@@ -143,72 +144,100 @@ const CarouselSection = () => {
   ];
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => 
-      prev === caravanData[activeType].length - 1 ? 0 : prev + 1
-    );
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    const nextIndex = (currentSlide + 1) % caravanData[activeType].length;
+    setCurrentSlide(nextIndex);
+    setTimeout(() => setIsTransitioning(false), 700);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => 
-      prev === 0 ? caravanData[activeType].length - 1 : prev - 1
-    );
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    const prevIndex = (currentSlide - 1 + caravanData[activeType].length) % caravanData[activeType].length;
+    setCurrentSlide(prevIndex);
+    setTimeout(() => setIsTransitioning(false), 700);
   };
 
   const handleTypeChange = (type) => {
-    setActiveType(type);
-    setCurrentSlide(0);
+    if (type !== activeType) {
+      setActiveType(type);
+      setCurrentSlide(0);
+    }
   };
+
+  const goToSlide = (index) => {
+    if (isTransitioning || index === currentSlide) return;
+    setIsTransitioning(true);
+    setCurrentSlide(index);
+    setTimeout(() => setIsTransitioning(false), 700);
+  };
+
+  // Auto-advance the carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (!isTransitioning) {
+        nextSlide();
+      }
+    }, 5000);
+    
+    return () => clearInterval(timer);
+  }, [currentSlide, activeType, isTransitioning]);
 
   return (
     <div className="carousel-section">
+      <h2 className="carousel-section-title">Our Caravans</h2>
       <div className="carousel-toggle">
-        <button 
+        <button
           className={`toggle-button ${activeType === 'offroad' ? 'active' : ''}`}
           onClick={() => handleTypeChange('offroad')}
         >
-          OFF-ROAD
+          Off Road
         </button>
-        <button 
+        <button
           className={`toggle-button ${activeType === 'xptech' ? 'active' : ''}`}
           onClick={() => handleTypeChange('xptech')}
         >
-          XP TECH
+          XP Tech
         </button>
       </div>
-
+      
       <div className="carousel-container">
-        <button className="carousel-button prev" onClick={prevSlide}>
+        <button className="carousel-button prev" onClick={prevSlide} aria-label="Previous slide">
           &#10094;
         </button>
-
+        <button className="carousel-button next" onClick={nextSlide} aria-label="Next slide">
+          &#10095;
+        </button>
+        
         <div className="carousel-content">
           {caravanData[activeType].map((caravan, index) => (
-            <Link
-              to={caravan.link}
-              key={index}
+            <Link 
+              to={caravan.link} 
+              key={index} 
               className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
-              style={{ transform: `translateX(${(index - currentSlide) * 100}%)` }}
+              style={{
+                transform: `translateX(${(index - currentSlide) * 100}%)`,
+                zIndex: index === currentSlide ? 1 : 0
+              }}
             >
               <img src={caravan.image} alt={caravan.name} />
               <div className="carousel-info">
                 <h3>{caravan.name}</h3>
-                <p>FROM {caravan.price}</p>
+                <p>{caravan.price}</p>
               </div>
             </Link>
           ))}
         </div>
-
-        <button className="carousel-button next" onClick={nextSlide}>
-          &#10095;
-        </button>
       </div>
-
+      
       <div className="carousel-dots">
         {caravanData[activeType].map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === currentSlide ? 'active' : ''}`}
-            onClick={() => setCurrentSlide(index)}
+          <div 
+            key={index} 
+            className={`dot ${index === currentSlide ? 'active' : ''}`} 
+            onClick={() => goToSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
