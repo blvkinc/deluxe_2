@@ -1,285 +1,81 @@
-/* XP Tech page styles */
-.xptec-page {
-  background-color: #fff;
-  color: #000;
-  font-family: 'ITC Avant Garde Gothic Pro', sans-serif;
-  overflow-x: hidden;
-}
-
-.xptec-container {
+/* WarrantyPolicy container styles */
+.warrantycontainer {
   display: flex;
   flex-direction: column;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
+  padding-top: 10vh;
 }
 
-/* Header styles */
-.xptec-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 120px;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.xptec-header h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-}
-
-.xptec-header h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-top: 0;
-  color: #333;
-  letter-spacing: 1px;
-}
-
-/* Introduction section */
-.xptec-intro {
-  margin: 60px 0;
-  padding: 0 40px;
-}
-
-.xptec-intro h2 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 30px;
-  text-align: left;
-}
-
-.tagline {
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin-bottom: 30px;
-  color: #333;
-  line-height: 1.4;
-}
-
-.description-block {
-  margin: 30px 0;
-}
-
-.description-block p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.section-transition {
-  font-size: 1.2rem;
-  font-weight: 500;
-  font-style: italic;
-  margin-top: 30px;
-  color: #333;
-}
-
-/* Content sections */
-.xptec-section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 60px 0;
-  gap: 40px;
-}
-
-.xptec-section.reverse {
-  flex-direction: row-reverse;
-}
-
-.image-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content-container {
-  flex: 1;
-  padding: 0 20px;
-}
-
-.content-container.full-width {
-  flex: 1;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.feature-image {
+.warrantycontainer img {
   width: 100%;
-  max-width: 500px;
+  max-width: 800px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.feature-image:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+/* WarrantyPolicy component styles */
+.warrantycomponent {
+  display: grid;
+  grid-template-columns: 1fr; /* Display components in a single column */
+  gap: 20px; /* Add spacing between components */
+  padding: 20px; /* Optional: Add padding to the components */
+  min-height: 50px; /* Increase the minimum height to create more spacing */
+  height: auto; /* Remove fixed height to allow components to expand as needed */
+  text-align: left;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 
-.xptec-section h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #111;
-}
-
-.xptec-section h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 30px 0 15px;
-  color: #333;
-}
-
-.xptec-section p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  color: #555;
-  margin-top: 10px;
-  letter-spacing: 1px;
-}
-
-.highlights-title {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-}
-
-.advantages-list {
-  list-style-type: none;
-  padding: 0;
+.warrantycomponent img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
   margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.advantages-list li {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  padding-left: 30px;
-  position: relative;
-  line-height: 1.6;
+/* Style heading and paragraph elements within the components */
+.warrantycomponent h2 {
+  margin-top: 10vh;
+  font-size: 1.5rem; /* Increase the font size for headings */
+  margin-bottom: 10px; /* Add space below headings */
 }
 
-.advantages-list li:before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #000;
-  font-weight: bold;
+.warrantycomponent p {
+  font-size: 1rem; /* Set a standard font size for paragraphs */
+  margin-bottom: 10px; /* Add space below paragraphs */
 }
 
-.highlights-container {
-  margin-top: 30px;
-  margin-bottom: 60px;
+/* Style unordered lists within the components */
+.warrantycomponent ul {
+  list-style-type: disc; /* Use disc bullets for lists */
+  padding-left: 20px; /* Add left padding to lists for indentation */
 }
 
-.final-section {
-  flex-direction: column;
-  background-color: #f9f9f9;
-  padding: 50px 30px;
-  border-radius: 10px;
-  margin-bottom: 80px;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 992px) {
-  .xptec-section {
-    flex-direction: column;
-    margin: 40px 0;
-  }
-  
-  .xptec-section.reverse {
-    flex-direction: column;
-  }
-  
-  .xptec-header h1 {
-    font-size: 2.8rem;
-  }
-  
-  .xptec-intro {
-    padding: 0 20px;
-  }
-  
-  .xptec-intro h2 {
-    font-size: 1.8rem;
-  }
-  
-  .tagline {
-    font-size: 1.2rem;
-  }
+/* Style list items within unordered lists */
+.warrantycomponent li {
+  font-size: 1rem; /* Set a font size for list items */
+  margin-bottom: 5px; /* Add space between list items */
 }
 
 @media screen and (max-width: 768px) {
-  .xptec-header {
-    padding-top: 100px;
-  }
-  
-  .xptec-header h1 {
-    font-size: 2.2rem;
-  }
-  
-  .xptec-header h2 {
-    font-size: 1.2rem;
-  }
-  
-  .xptec-intro h2 {
-    font-size: 1.6rem;
-  }
-  
-  .xptec-section h2 {
-    font-size: 1.6rem;
-  }
-  
-  .content-container, .image-container {
-    padding: 0 10px;
-  }
-  
-  .feature-image {
+  .warrantycontainer img {
     max-width: 100%;
   }
-  
-  .description-block p, .xptec-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  .advantages-list li {
-    font-size: 1rem;
-  }
-}
 
-@media screen and (max-width: 480px) {
-  .xptec-header {
-    padding-top: 80px;
+  .warrantycomponent img {
+    max-width: 100%;
   }
-  
-  .xptec-header h1 {
-    font-size: 1.8rem;
+
+  .warrantycomponent {
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
-  
-  .xptec-section {
-    margin: 30px 0;
-    gap: 20px;
-  }
-  
-  .xptec-intro {
-    margin: 40px 0;
-    padding: 0 10px;
-  }
-  
-  .final-section {
-    padding: 30px 15px;
+
+  .warrantycontainer h2 {
+    font-size: 1rem;
   }
 }

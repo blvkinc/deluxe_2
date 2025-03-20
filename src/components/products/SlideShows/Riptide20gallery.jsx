@@ -1,57 +1,33 @@
-import React, { useEffect, useState } from "react";
-import "./Stormbreaker19inside.css";
+import React, { useState, useEffect } from "react";
+import "./Stormbreaker21inside.css";
 
-import Strombreaker19insidecarousel from "../mobile-carousels/Strombreaker19insidecarousel";
+import Rip20carousel from "../mobile-carousels/Riptide20insidecarousel";
 
-const sections = [
+const sections =  [
   {
     name: "Exterior",
     images: [
-      "https://deluxcaravan.b-cdn.net/assets/Product%20renders/19des.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20ex%201.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20ex%202.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20ex%203.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20ex%204.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20ex%205.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20ex%206.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20ex%203.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20ex%204.webp",
+      "https://deluxcaravan.b-cdn.net/assets/coming%20soon.webp",
     ],
     description: "",
   },
   {
     name: "Layout",
     images: [
-      "https://deluxcaravan.b-cdn.net/assets/Product%20renders/SB196%20layout.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Product%20renders/19laydes.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Product%20renders/19lay2.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Product%20renders/SB196%20layout.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Product%20renders/19lay2.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Product%20renders/SB196%20layout.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Product%20renders/19lay2.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Product%20renders/SB196%20layout.webp",
-      "https://deluxcaravan.b-cdn.net/assets/Product%20renders/19lay2.webp",
+      "https://deluxcaravan.b-cdn.net/assets/Rip20/rip20layout.webp",
+     
     ],
     description: "",
   },
   {
     name: "Inside",
-    images: [
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20in%201-1.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20in%201-2.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20in%201-3.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20in%204.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20in%205.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20in%206.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20in%207.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20in%208.webp",
-      "https://deluxcaravan.b-cdn.net/assets/19/19%20in%209.webp",
-    ],
+    images: ["https://deluxcaravan.b-cdn.net/assets/coming%20soon.webp",
+],
     description: "",
   },
 ];
 
-function Strombreaker19inside() {
+function Rip20gallery() {
   const [activeSection, setActiveSection] = useState(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
@@ -163,10 +139,10 @@ function Strombreaker19inside() {
         </div>
       </div>
       <div className="mobile-div">
-        <Strombreaker19insidecarousel />
+        <Rip20carousel />
       </div>
     </>
   );
 }
 
-export default Strombreaker19inside;
+export default Rip20gallery;

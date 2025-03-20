@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import "./Products.css";
 import "../home/Home.css";
 import "../home/homecomponents/HomeComponent.css";
-import Eclipse22CouplesInside from "../products/SlideShows/Eclipse22CouplesInside";
+import Eclipse22gallery from "../products/SlideShows/Eclipse22gallery";
 import { gsap } from "gsap";
 import GoToTop from "../functions/GoToTop";
 import SpecsEclipse22 from "./Specsmenu/SpecsEclipse22";
@@ -86,7 +86,7 @@ const Eclipse22CouplesOffRoad = () => {
       </div>
 
       <div className="slideshowcomopnent">
-        <Eclipse22CouplesInside />
+        <Eclipse22gallery />
       </div>
       {/* <div className='slideshowcomopnent'>
     </div> */}

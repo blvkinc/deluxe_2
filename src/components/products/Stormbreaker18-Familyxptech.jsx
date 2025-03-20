@@ -5,8 +5,8 @@ import "../home/homecomponents/HomeComponent.css";
 import GoToTop from "../functions/GoToTop";
 import Strom18inside from "./SlideShows/Stormbreaker18inside";
 import { gsap } from "gsap";
-import Storm18specs from "./Specsmenu/Specs18";
-import Techspec18 from "./techspecs/Techspec18";
+import Storm18specs from "./Specsmenu/Specs18xptech";
+import Techspec18xptech from "./techspecs/Techspec18xptech";
 import WarrantyPolicyPopup from "./popup/WarrantyPolicyPopUp";
 import LayoutPopUp from "./popup/LayoutPopUp";
 import { Link } from "react-router-dom";
@@ -152,7 +152,7 @@ const Stormbreaker18FamilyXPTech = () => {
         </div>
       </div>
       <div className="component" id="specs">
-        <Techspec18 />
+        <Techspec18xptech />
       </div>
       <div className="component" id="specs">
         <h1>Specs Menu</h1>

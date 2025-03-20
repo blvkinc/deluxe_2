@@ -1,60 +1,82 @@
-import React from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import "./HomeComponent.css";
 
 const Partners = () => {
+  const sliderRef = useRef(null);
+
+  const animateSlider = useCallback(() => {
+    if (sliderRef.current) {
+      const slideTrack = sliderRef.current.querySelector(".slide-track");
+      const slides = sliderRef.current.querySelectorAll(".slide");
+      const slideWidth = slides[0].offsetWidth;
+
+      let currentIndex = 0;
+
+      const cloneFirstSlide = () => {
+        const firstSlide = slides[0].cloneNode(true);
+        slideTrack.appendChild(firstSlide);
+      };
+
+      const removeLastSlide = () => {
+        const lastSlide = slideTrack.lastChild;
+        slideTrack.removeChild(lastSlide);
+      };
+
+      const interval = setInterval(() => {
+        currentIndex++;
+        const translateX = -currentIndex * slideWidth;
+        slideTrack.style.transition = "transform 1s linear";
+        slideTrack.style.transform = `translateX(${translateX}px)`;
+
+        if (currentIndex === slides.length - 1) {
+          setTimeout(() => {
+            slideTrack.style.transition = "none";
+            slideTrack.style.transform = "translateX(0)";
+            currentIndex = 0;
+            removeLastSlide();
+            cloneFirstSlide();
+          }, 1000);
+        }
+      }, 2000);
+
+      return () => clearInterval(interval);
+    }
+  }, []);
+
+  useEffect(() => {
+    animateSlider();
+  }, [animateSlider]);
+
   return (
-    <section className="partners-section">
+    <>
       <h1 className="partners-heading">Our Premium Partners</h1>
-      <div className="slider">
+      <div className="slider" ref={sliderRef}>
         <div className="slide-track">
-          {/* First set of logos */}
+          {/* Your slide items */}
           <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/2022_bmpro-logo-hp.webp" alt="BMPRO" />
+            <img src="https://deluxcaravan.b-cdn.net/assets/partners/2022_bmpro-logo-hp.webp" width="500" height="200" alt="" />
           </div>
           <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/Enerdrive-logo.webp" alt="Enerdrive" />
+            <img src="https://deluxcaravan.b-cdn.net/assets/partners/Enerdrive-logo.webp" width="500" height="200" alt="" />
           </div>
           <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/logo.webp" alt="Logo" />
+            <img src="https://deluxcaravan.b-cdn.net/assets/partners/logo.webp" width="500" height="200" alt="" />
           </div>
           <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/dometic.webp" alt="Dometic" />
+            <img src="https://deluxcaravan.b-cdn.net/assets/partners/dometic.webp" width="500" height="auto" alt="" />
           </div>
           <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/cruisemaster.webp" alt="Cruisemaster" />
+            <img src="https://deluxcaravan.b-cdn.net/assets/partners/cruisemaster.webp" width="500" height="auto" alt="" />
           </div>
           <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/atrv-min.webp" alt="ATRV" />
+            <img src="https://deluxcaravan.b-cdn.net/assets/partners/atrv-min.webp" width="500" height="200" alt="" />
           </div>
           <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/camec-min.webp" alt="Camec" />
-          </div>
-          
-          {/* Duplicate logos for smooth infinite loop */}
-          <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/2022_bmpro-logo-hp.webp" alt="BMPRO" />
-          </div>
-          <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/Enerdrive-logo.webp" alt="Enerdrive" />
-          </div>
-          <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/logo.webp" alt="Logo" />
-          </div>
-          <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/dometic.webp" alt="Dometic" />
-          </div>
-          <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/cruisemaster.webp" alt="Cruisemaster" />
-          </div>
-          <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/atrv-min.webp" alt="ATRV" />
-          </div>
-          <div className="slide">
-            <img src="https://deluxcaravan.b-cdn.net/assets/partners/camec-min.webp" alt="Camec" />
+            <img src="https://deluxcaravan.b-cdn.net/assets/partners/camec-min.webp" width="500" height="200" alt="" />
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 

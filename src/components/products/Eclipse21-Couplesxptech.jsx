@@ -2,11 +2,11 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import "./Products.css";
 import "../home/Home.css";
 import "../home/homecomponents/HomeComponent.css";
-import Eclipse21CouplesInside from "../products/SlideShows/Eclipse21CouplesInside";
+import Eclipse21gallery from "../products/SlideShows/Eclipse21gallery";
 import { gsap } from "gsap";
 import GoToTop from "../functions/GoToTop";
-import SpecsEclipse21 from "./Specsmenu/SpecsEclipse21";
-import TechspecEclipse21 from "./techspecs/TechspecEclipse21";
+import SpecsEclipse21 from "./Specsmenu/SpecsEclipse21xptech";
+import TechspecEclipse21xptech from "./techspecs/TechspecEclipse21xptech";
 import WarrantyPolicyPopup from "./popup/WarrantyPolicyPopUp";
 import { Link } from "react-router-dom";
 
@@ -87,7 +87,7 @@ const Eclipse21CouplesXPTech = () => {
       </div>
 
       <div className="slideshowcomopnent">
-        <Eclipse21CouplesInside />
+        <Eclipse21gallery />
       </div>
       {/* <div className='slideshowcomopnent'>
     </div> */}
@@ -137,7 +137,7 @@ const Eclipse21CouplesXPTech = () => {
         </div>
       </div>
       <div className="component" id="specs">
-        <TechspecEclipse21 />
+        <TechspecEclipse21xptech />
       </div>
       <div className="component" id="specs">
         <h1>Specs Menu</h1>

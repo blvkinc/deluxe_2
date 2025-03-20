@@ -2,11 +2,11 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import "./Products.css";
 import "../home/Home.css";
 import "../home/homecomponents/HomeComponent.css";
-import Riptide22inside from "./SlideShows/Riptide22gallery";
+import Riptide20inside from "./SlideShows/Riptide20gallery";
 import { gsap } from "gsap";
 import GoToTop from "../functions/GoToTop";
-import Rip22specs from "./Specsmenu/SpecsRiptide22xptech";
-import TechspecRiptide22 from "./techspecs/TechspecRiptide22";
+import Rip20specs from "./Specsmenu/SpecsRiptide20";
+import TechspecRiptide20 from "./techspecs/TechspecRiptide20";
 import WarrantyPolicyPopup from "./popup/WarrantyPolicyPopUp";
 import { Link } from "react-router-dom";
 
@@ -24,7 +24,7 @@ const scrollToLayout = () => {
   }
 };
 
-const Riptide22FamilyXPTech = () => {
+const Riptide20FamilyOffRoad = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -63,12 +63,12 @@ const Riptide22FamilyXPTech = () => {
       <div className="component">
         <div className="background-image">
           <img
-            src="https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20Exterior-min.webp"
+            src="https://deluxcaravan.b-cdn.net/assets/Rip20/Riptide%20Exterior-min.webp"
             alt=""
           />
           <div className="image-overlay">
             <div className="button-container">
-              <h1 className="Product-header revealUp">RIPTIDE 22`</h1>
+              <h1 className="Product-header revealUp">RIPTIDE 20`</h1>
               <button
                 onClick={scrollToLayout}
                 className="btn hover-border-1 revealUp"
@@ -87,10 +87,8 @@ const Riptide22FamilyXPTech = () => {
       </div>
 
       <div className="slideshowcomopnent">
-        <Riptide22inside />
+        <Riptide20inside />
       </div>
-      {/* <div className='slideshowcomopnent'>
-    </div> */}
       <div className="component">
         <div
           className="product-container"
@@ -101,33 +99,13 @@ const Riptide22FamilyXPTech = () => {
         >
           <div className="description">
             <p>
-              Are you on the hunt for a more spacious family bunk caravan? Your
-              search ends here with the Riptide 22``, the solution you've been
-              seeking. This model offers all the remarkable features found in
-              our Stormbreaker range. Every journey transforms into an
-              unforgettable experience, thanks to its premium built interior,
-              exterior, and mechanical features. when you embark on the open
-              road with your loved ones, you'll be treated to an exceptionally
-              roomy layout, complete with all the amenities you'd expect from a
-              luxury RV adventure. But our commitment doesn't end there- we
-              ensure your adventures leave no environmental footprint. With
-              eco-friendly features, you can travel without guilt and experience
-              all the joy you deserve.
+              The Riptide 20` offers the perfect balance of comfort and functionality for your family adventures. This model combines spacious living areas with practical features, making it an ideal choice for families seeking a reliable and comfortable caravan. With its well-thought-out layout and premium finishes, the Riptide 20` provides all the amenities you need for memorable journeys. Experience the perfect blend of style and substance with this versatile family caravan.
             </p>
             <p>
               <button className="virtual-btn">
-                <a href="/tour">Have a look at RIPTIDE 22`</a>
+                <a href="/tour">Have a look at RIPTIDE 20`</a>
               </button>
             </p>
-            {/* <button
-              className="btn hover-border-1 revealUp"
-              onClick={openWarrantyPopupWarrantyPolicy}
-            >
-              Download Our Brochure and Upgrade List
-            </button>
-            {isWarrantyPopupOpen && (
-              <WarrantyPolicyPopup onClose={closeWarrantyPopupWarrantyPolicy} />
-            )} */}
           </div>
           <div className="package-details">
             <p>
@@ -146,24 +124,15 @@ const Riptide22FamilyXPTech = () => {
         </div>
       </div>
       <div className="component" id="specs">
-        <TechspecRiptide22 />
+        <TechspecRiptide20 />
       </div>
       <div className="component" id="specs">
         <h1>Specs Menu</h1>
-        <Rip22specs />
-      </div>
-      <div className="component" id="xptechbanner">
-        <Link to="/xptec">
-          <img 
-            src="https://deluxcaravan.b-cdn.net/assets/xp%20tec/Find%20out%20More%20About%20Xp%20tec.png" 
-            alt="XP Tech Banner" 
-            className="xptech-banner"
-          />
-        </Link>
+        <Rip20specs />
       </div>
       <GoToTop />
     </div>
   );
 };
 
-export default React.memo(Riptide22FamilyXPTech);
+export default React.memo(Riptide20FamilyOffRoad); 

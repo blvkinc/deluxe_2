@@ -24,6 +24,12 @@ const Eclipse22CouplesXPTech = lazy(() =>
 const Riptide22FamilyOffRoad = lazy(() =>
   import("./components/products/Riptide22-Familyoffroad")
 );
+const Riptide20FamilyOffRoad = lazy(() =>
+  import("./components/products/Riptide20-Familyoffroad")
+);
+const Riptide20FamilyXPTech = lazy(() =>
+  import("./components/products/Riptide20-Familyxptech")
+);
 const Riptide22FamilyXPTech = lazy(() =>
   import("./components/products/Riptide22-Familyxptech")
 );
@@ -122,6 +128,14 @@ function App() {
             <Route
               path="/riptide22familyoffroad"
               element={<Riptide22FamilyOffRoad />}
+            />
+            <Route
+              path="/riptide20familyoffroad"
+              element={<Riptide20FamilyOffRoad />}
+            />
+            <Route
+              path="/riptide20familyxptech"
+              element={<Riptide20FamilyXPTech />}
             />
             <Route
               path="/riptide22familyxptech"

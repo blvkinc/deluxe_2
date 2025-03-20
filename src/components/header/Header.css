@@ -1,314 +1,286 @@
-/* Modern Header Styling - Simplified Approach */
-.header-container {
-  position: relative;
-}
-
+/* Header container */
 .header {
+  background: transparent;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 30px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5vw;
-  height: 80px;
-  background-color: rgba(0, 0, 0, 0.85);
-  color: white;
-  transition: all 0.3s ease;
-  z-index: 100;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  overflow: visible; /* Show overflow content */
+  height: auto; /* Auto height for the header */
 }
 
-.header.scrolled,
-.header:hover,
-.header.menu-open {
-  background-color: rgba(255, 255, 255, 0.95);
-  color: #333;
-  backdrop-filter: blur(20px);
+.header:hover {
+  background-color: #ffffff;
+  color: #000000;
+  height: auto; /* Auto height on hover */
 }
 
 .header.hidden {
   transform: translateY(-100%);
+  transition: transform 0.3s ease, visibility 0.3s ease;
+}
+
+.header img {
+  align-items: center;
+  max-width: 17vw;
+  margin-right: 4vw;
+}
+
+.header h3,
+h5 {
+  text-align: left;
 }
 
 /* Logo */
-.header-logo {
-  flex: 0 0 auto;
-  width: 100px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-}
-
-.header-logo a {
-  display: block;
-}
-
-.header-logo img,
-.header-logo-img {
-  max-width: 100px;
-  max-height: 50px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Center Navigation */
-.header-nav {
-  display: flex;
-  justify-content: center;
-  flex: 1;
-}
-
-.menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-}
-
-.menu-item {
-  position: static;
-  margin: 0 15px;
-}
-
-.menu-title {
-  display: block;
-  font-size: 16px;
-  font-weight: 500;
-  color: inherit;
-  padding: 10px 15px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: 0.3s ease;
-  letter-spacing: 0.5px;
-}
-
-.menu-item:hover .menu-title {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.header.scrolled .menu-item:hover .menu-title,
-.header:hover .menu-item:hover .menu-title,
-.header.menu-open .menu-item:hover .menu-title {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.header.scrolled .menu-title,
-.header:hover .menu-title,
-.header.menu-open .menu-title {
-  color: #333;
-}
-
-/* Full-page Dropdown Approach */
-.dropdown-menu {
+.header-logo img {
   position: fixed;
-  top: 80px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background-color: white;
-  padding: 40px 5vw;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 99;
-  pointer-events: none;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  top: 1.6rem;
+  left: auto;
 }
 
-.menu-item:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-}
-
-.dropdown-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.dropdown-column {
-  width: 100%;
-}
-
-.dropdown-column h4 {
-  margin: 0 0 20px 0;
-  padding-bottom: 15px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.dropdown-item {
+/* Navigation menu */
+.header-nav .menu {
+  list-style-type: none;
   display: flex;
-  align-items: center;
-  padding: 15px 0;
-  text-decoration: none;
-  color: #555;
-  transition: all 0.2s ease;
-  border-radius: 4px;
-  margin-bottom: 10px;
 }
 
-.dropdown-item:hover {
-  background-color: rgba(0, 0, 0, 0.03);
-  color: #111;
-  padding-left: 5px;
-  padding-right: 5px;
+.header-nav .menu-item button {
+  margin-right: 20px;
+  position: relative;
+  color: #ffffff;
+  justify-content: space-evenly;
+  cursor: pointer;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+  margin-right: 3rem;
 }
 
-.dropdown-item img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  margin-right: 15px;
-  border-radius: 4px;
+.header:hover .header-nav .menu-item button {
+  color: #000000; /* Change color when menu is hovered */
 }
-
-/* Social icons styling */
-.social-icon {
-  width: 40px !important;
-  height: 40px !important;
-  object-fit: contain !important;
-}
-
-.dropdown-item div {
-  display: flex;
-  flex-direction: column;
-}
-
-.dropdown-item span {
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.dropdown-item small {
-  color: #777;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-/* Right side menu */
-.right-menu {
-  display: flex;
-  align-items: center;
-}
-
-/* Menu button */
-.menu-toggle {
-  display: none;
+.header-nav .menu-item button {
   background: none;
   border: none;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 8px 16px;
-  cursor: pointer;
   color: inherit;
-  transition: 0.3s ease;
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+  position: relative; /* Add relative position */
 }
 
-/* Mobile Menu */
-.mobile-menu {
+.header:hover .header-nav .menu-item button {
+  color: #000000; /* Change color when menu is hovered */
+}
+
+.menu-item.active button {
+  font-weight: 700;
+}
+
+.sub-menu-item.active-submenu {
+  font-weight: 700;
+}
+
+.nested-submenu-item.active-nested-submenu {
+  font-weight: 700;
+}
+
+.deep-nested-submenu-item.active-deep-nested-submenu {
+  font-weight: 700;
+}
+
+.menu-item a button:hover {
+  font-weight: 700;
+}
+
+/* Shared styles for sub-menu and nested-submenu */
+.sub-menu,
+.nested-submenu {
+  background-color: #ffffff;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  width: 100%;
   position: fixed;
-  top: 80px;
+  top: 75px;
+  left: 0;
   right: 0;
-  width: 300px;
-  height: calc(100vh - 80px);
-  background-color: white;
-  padding: 20px;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-  overflow-y: auto;
-  z-index: 99;
   display: flex;
-  flex-direction: column;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.mobile-menu.active {
-  transform: translateX(0);
-}
-
-.mobile-menu-item {
-  padding: 12px 0;
-  border-bottom: 1px solid #f0f0f0;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
   text-decoration: none;
-  color: #171a20;
-  font-weight: 500;
+  color: #000000 !important;
+  pointer-events: auto;
 }
 
-.mobile-submenu {
-  padding-left: 16px;
-  margin-top: 8px;
-  display: none;
+/* Shared styles for sub-menu-item and nested-submenu-item */
+.sub-menu-item,
+.nested-submenu-item {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s, transform 0.3s ease;
+  margin-right: 30px;
 }
 
-.mobile-submenu.active {
-  display: block;
+/* Active state for sub-menu and nested-submenu */
+.menu-item:hover .sub-menu,
+.menu-item:hover .nested-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
-/* Custom header for dark pages */
+/* Active state for sub-menu-item and nested-submenu-item */
+.menu-item.active .sub-menu-item,
+.menu-item.active .nested-submenu-item {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s ease;
+}
+
+/* Specific styles for nested-submenu (applied to deep-nested-submenu as well) */
+.nested-submenu {
+  top: 122px;
+}
+
+/* Deep nested submenu inherits nested-submenu styles */
+.deep-nested-submenu {
+  background-color: #ffffff;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  position: fixed;
+  top: 170px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-decoration: none;
+  color: #000000 !important;
+  pointer-events: auto;
+}
+
+/* Deep nested submenu items */
+.deep-nested-submenu-item {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-right: 30px;
+}
+
+/* Active state for deep nested submenu */
+.menu-item:hover .deep-nested-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+  transition: opacity 0.5s, visibility 0.3s, transform 0.3s ease;
+}
+
+/* Active state for deep nested submenu items */
+.menu-item.active .deep-nested-submenu-item {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s ease;
+}
+
+/* Specific styles for Stormbreaker */
+.sub-menu-item .submenu-label.stormbreaker {
+  font-weight: 700;
+  margin-left: 50px;
+}
+
+/* Specific styles for Riptide */
+.sub-menu-item .submenu-label.riptide {
+  font-weight: 700;
+  margin-left: 50px;
+}
+
+.iconh {
+  height: 27px;
+}
+
+/* Custom header styles for Maintenance and Warranty pages */
 .custom-header {
-  background-color: transparent;
-  color: white;
+  color: black !important;
 }
 
-/* Three columns for wider screens */
-@media (min-width: 1200px) {
-  .dropdown-content {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.custom-header .menu-item button {
+  color: black !important;
 }
 
-/* Responsive Styles */
-@media (max-width: 1200px) {
-  .dropdown-content {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .header-nav {
-    display: none;
-  }
-  
-  .menu-toggle {
-    display: block;
-  }
+.custom-header:hover {
+  background-color: black !important;
+  color: white !important;
 }
 
+.custom-header:hover .menu-item button {
+  color: white !important;
+}
+
+.custom-header .sub-menu,
+.custom-header .nested-submenu,
+.custom-header .deep-nested-submenu {
+  background-color: black !important;
+  color: white !important;
+}
+
+.custom-header .sub-menu-item,
+.custom-header .nested-submenu-item,
+.custom-header .deep-nested-submenu-item {
+  color: white !important;
+}
+
+.custom-header .iconh {
+  filter: brightness(0) invert(1); /* Convert icons to white */
+}
+
+/* Media query for smaller screens */
 @media (max-width: 768px) {
   .header {
-    height: 70px;
-    padding: 0 20px;
+    padding: 10px;
   }
-  
-  .header-logo {
-    width: 80px;
-    height: 40px;
+
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #ffffff;
+    padding: 20px;
+    flex-direction: column;
+    border-radius: 5px;
   }
-  
-  .header-logo img,
-  .header-logo-img {
-    max-width: 80px;
-    max-height: 40px;
+
+  .header-nav.active {
+    display: flex;
   }
-  
-  .dropdown-content {
-    grid-template-columns: 1fr;
+
+  .header-nav .menu-item {
+    margin: 10px 0;
   }
-  
-  .dropdown-menu {
-    top: 70px;
-    padding: 30px 20px;
+
+  .header-logo img {
+    position: fixed;
+    top: 1rem;
+    left: 5rem;
   }
 }
