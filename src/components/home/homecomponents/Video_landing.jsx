@@ -48,15 +48,13 @@ function VideoLanding() {
     <div className="landing_Page_video_container">
       <div className="video-overlay">
         <div className="video-container">
-          <div className="video-background">
-            <iframe
-              className="landing_page_video"
-              src="https://player.vimeo.com/video/1068017438?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&background=1"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              title="2 MIN Landscape 4K_1"
-            ></iframe>
-          </div>
+          <video autoPlay muted loop playsInline className="landing_page_video">
+            <source
+              src="https://deluxcaravan.b-cdn.net/assets/Landingpagevideo2.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
           <div className="australian-made-banner">
             <span>AUSTRALIAN MADE</span>
           </div>

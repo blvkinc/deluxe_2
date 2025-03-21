@@ -1,5 +1,5 @@
-import React, { useState, useCallback } from "react";
-import "./Specsmenu.css";
+import React, { useState, useCallback } from 'react';
+import './Specsmenu.css';
 
 const SpecsRiptide20 = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -11,10 +11,11 @@ const SpecsRiptide20 = () => {
     [setActiveIndex]
   );
 
-  const data = [
-    {
-      title: "INTERIOR",
-      content: `Bed - Queen Island with Lift-Up Storage 
+
+    const data = [
+      {
+        title: 'INTERIOR',
+        content: `Bed - Queen Island with Lift-Up Storage 
         Niche - Bedside - Both Sides
         Bunks - 2 Bunks (Length: Top Bunk - 2.0m, Middle Bunk 2.0m )
         Mattress - Innerspring with Pillow-Top 
@@ -30,18 +31,18 @@ const SpecsRiptide20 = () => {
         Hinges  
         Pantry - Half (Slide-Out) 
         Frame – Meranti`,
-    },
-    {
-      title: "SPLASHBACK, BENCHTOP, CUPBOARD DOORS AND UPHOLSTERY",
-      content: `Bench Top - Premium Laminate 
+      },
+        {
+          title: 'SPLASHBACK, BENCHTOP, CUPBOARD DOORS AND UPHOLSTERY',
+          content: `Bench Top - Premium Laminate 
           Bench Top Lid - Over Stove 
           Splashback Kitchen - Full Height 
           Cupboard Doors - Premium Laminate ( Scratch & UV Resistant ) 
           Upholstery - Faux Leather Vinyl `,
-    },
-    {
-      title: "ELECTRICAL - INTERNAL",
-      content: `Projecta 30A charger + 30A MPPT
+      },
+        {
+          title: 'ELECTRICAL - INTERNAL',
+          content: `Projecta 30A charger + 30A MPPT
           Projecta Display w Bluetooth 
           Lighting - LED Down lights 
           TV - Co-Ax Point 
@@ -50,10 +51,10 @@ const SpecsRiptide20 = () => {
           USB Ports - 1 x in Each Bunk (2), 2 x Bedside & 1 x Lounge 
           Reading Lights 
           Sirocco Fan – Main bed `,
-    },
-    {
-      title: "ELECTRICAL - EXTERNAL",
-      content: `2 x LED Annexe Lights
+      },
+        {
+            title: 'ELECTRICAL - EXTERNAL',
+            content: `2 x LED Annexe Lights
             1 x LED Annexe Light over Tunnel Boot
             LED Tunnel Boot Light
             Blue LED Door Handle Light
@@ -67,10 +68,10 @@ const SpecsRiptide20 = () => {
             An Antenna
             2 X 100AH LITHIUM BATTERIES
             Side Markers with Reflector`,
-    },
-    {
-      title: "APPLIANCES",
-      content: `Air Conditioning - DOMETIC Series 7 AIRCON
+         },
+          {
+            title: 'APPLIANCES',
+            content: `Air Conditioning - DOMETIC Series 7 AIRCON
             Front Load Washing Machine
             Hot water – 28-litre Gas/Electric Heating
             Rangehood: 12V LED with Twin Fans
@@ -79,10 +80,10 @@ const SpecsRiptide20 = () => {
             25L Microwave
             Stereo/Speaker System
             24” TV`,
-    },
-    {
-      title: "PLUMBING",
-      content: `ABS Shower
+          },
+          {
+            title: 'PLUMBING',
+            content: `ABS Shower
             Thetford Toilet
             Premium Black Kitchen Tap
             Black Round Basin
@@ -93,10 +94,10 @@ const SpecsRiptide20 = () => {
             Tap on A-frame
             2 x 95-Litre Water Tanks
             110-Litre Grey Water Tank`,
-    },
-    {
-      title: "EXTERIOR",
-      content: `17Ft Roll-Out Awning
+          },
+          {
+            title: 'EXTERIOR',
+            content: `17Ft Roll-Out Awning
             Storage Compartment Hatch (Rear, Off-Side)
             Foldable Picnic Table
             2 x Tunnel Boot – ( Dual Access )
@@ -105,19 +106,19 @@ const SpecsRiptide20 = () => {
             Stone Mesh Guard
             Large Toolbox with Dual Slide Out
             Front Dual Bike Rack`,
-    },
-    {
-      title: "PROTECTION",
-      content: `Checker Plate Front 900mm (Black)
+          },
+          {
+            title: 'PROTECTION',
+            content: `Checker Plate Front 900mm (Black)
             Checker Plate Sides 900mm (Black)
             Checker Plate Sides 700mm (Black)
             Aluminium Composite Cladding
             Mudflaps
             12” Electric Brake System`,
-    },
-    {
-      title: "CHASSIS",
-      content: `Dual Axle
+          },
+          {
+            title: 'CHASSIS',
+            content: `Dual Axle
             Hitch: D035
             A-Frame: 6″
             Chassis: 6″ Dura-Gal
@@ -130,20 +131,21 @@ const SpecsRiptide20 = () => {
             Jack: CNR Supports (Drop-Down)
             A-Frame Jockey Wheel
             Storage Mesh Plate`,
-    },
-    {
-      title: "OVERALL",
-      content: `Ball Weight: 180 kg
-            Tare Weight: 2800 kg
+          },
+          {
+            title: 'OVERALL',
+            content: `Ball Weight: 200 kg
+            Tare Weight: 2920 kg
             ATM: 3500 kg`,
-    },
-    {
-      title: "SUSPENSION",
-      content: `FULL OFF-ROAD - INDEPENDENT – 3.7T`,
-    },
-  ];
+          },
+          {
+            title: 'SUSPENSION',
+            content: `FULL OFF-ROAD - INDEPENDENT – 3.7T`,
+          },
+      ];
+      
 
-  return (
+   return (
     <div className="specs_container">
       <div className="accordion">
         <dl>
@@ -152,7 +154,7 @@ const SpecsRiptide20 = () => {
               <dt>
                 <button
                   className={`accordionTitle ${
-                    activeIndex === index ? "accordionTitleActive" : ""
+                    activeIndex === index ? 'accordionTitleActive' : ''
                   }`}
                   onClick={() => toggleAccordion(index)}
                 >
@@ -162,12 +164,12 @@ const SpecsRiptide20 = () => {
               <dd
                 className={`accordionItem ${
                   activeIndex === index
-                    ? "animateIn"
-                    : "accordionItemCollapsed animateOut"
+                    ? 'animateIn'
+                    : 'accordionItemCollapsed animateOut'
                 }`}
               >
                 <ul className="list">
-                  {item.content.split("\n").map((listItem, subIndex) => (
+                  {item.content.split('\n').map((listItem, subIndex) => (
                     <li key={subIndex}>{listItem.trim()}</li>
                   ))}
                 </ul>
