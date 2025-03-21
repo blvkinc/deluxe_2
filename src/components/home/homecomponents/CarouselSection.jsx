@@ -35,7 +35,7 @@ const CarouselSection = () => {
       {
         name: 'Riptide 20',
         price: '$96,900',
-        image: 'https://deluxcaravan.b-cdn.net/assets/Rip20/Riptide%20header-min.webp',
+        image: 'https://deluxcaravan.b-cdn.net/assets/Rip22/Riptide%20header-min.webp',
         link: '/riptide20familyoffroad'
       },
       {
